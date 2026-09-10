@@ -30,7 +30,7 @@ The scripts that produced the FeudalNet results in the paper, taken from `feudal
 | File | Role |
 |---|---|
 | `evaluate_agent_chart.py` | Evaluates a checkpoint against any set of opponents in repeats of 250 games and writes the `*_games.csv` and `*_summary.csv` files in `../2_baseline_16x16/`, `../3_baseline_8x8/` and `../4_adaptation_eval/`. |
-| `live_winrate.py` | Live win-rate chart used by the evaluator (`*_livechart.png`). |
+| `live_winrate.py` | Live win-rate chart used by the evaluator. |
 
 ## Round-robin tournament (§4.1, Figure 3)
 
