@@ -1,0 +1,214 @@
+New wandb run: agent-naiveMCTSAI (bx8r54so)
+Run id bx8r54so written to run_id_finetune.txt
+[34m[1mwandb[0m: [33mWARNING[0m The get_url method is deprecated and will be removed in a future release. Please use `run.url` instead.
+Run config (74 parameters) → models/configs/agent-naiveMCTSAI_bx8r54so_config.csv
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Envs: 24 x naiveMCTSAI on maps/16x16/basesWorkers16x16.xml
+/home/rhatos/.conda/envs/feudalenv/lib/python3.9/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+Model: embedded | parameters: 661,854
+  optimizer: none to restore (KeyError) — starting fresh
+Loaded example_models/16x16/agent.pt
+Fine-tuning vs naiveMCTSAI for 1,000,000 steps, counting from 0
+Fine-tuning | 24 envs vs naiveMCTSAI | 1,000,000 steps | map 16x16 | batch 6144 / minibatch 1536 | wandb: agent-naiveMCTSAI
+step=     6,144 ( 0.6%) | ep_ret=n/a  win=n/a  wr5=n/a | pg=0.0225 v=0.1513 kl=0.0813 | 470 sps | ETA 35m 16s
+step=    12,288 ( 1.2%) | ep_ret=n/a  win=n/a  wr5=n/a | pg=0.0755 v=0.7861 kl=0.2579 | 421 sps | ETA 39m 06s
+step=    18,432 ( 1.8%) | ep_ret=n/a  win=n/a  wr5=n/a | pg=0.1237 v=0.8164 kl=0.4586 | 366 sps | ETA 44m 44s
+step=    24,576 ( 2.5%) | ep_ret=192.40  win=1.00  wr5=100% (1/24 envs) | pg=0.1475 v=0.6455 kl=0.4655 | 332 sps | ETA 49m 01s
+step=    30,720 ( 3.1%) | ep_ret=n/a  win=n/a  wr5=100% (1/24 envs) | pg=0.1370 v=0.9010 kl=0.3527 | 310 sps | ETA 52m 08s
+step=    36,864 ( 3.7%) | ep_ret=n/a  win=n/a  wr5=100% (1/24 envs) | pg=0.1442 v=0.5799 kl=0.2301 | 300 sps | ETA 53m 31s
+step=    43,008 ( 4.3%) | ep_ret=n/a  win=n/a  wr5=100% (1/24 envs) | pg=0.1162 v=0.3857 kl=0.1933 | 291 sps | ETA 54m 51s
+step=    49,152 ( 4.9%) | ep_ret=206.55  win=0.00  wr5=4% | pg=0.0631 v=0.7534 kl=0.0893 | 287 sps | ETA 55m 11s
+step=    55,296 ( 5.5%) | ep_ret=n/a  win=n/a  wr5=4% | pg=0.0172 v=0.1901 kl=0.0747 | 296 sps | ETA 53m 12s
+step=    61,440 ( 6.1%) | ep_ret=n/a  win=n/a  wr5=4% | pg=0.0470 v=0.7258 kl=0.0892 | 297 sps | ETA 52m 38s
+step=    67,584 ( 6.8%) | ep_ret=n/a  win=n/a  wr5=4% | pg=0.0782 v=0.7291 kl=0.1625 | 293 sps | ETA 53m 00s
+step=    73,728 ( 7.4%) | ep_ret=169.90  win=0.50  wr5=4% | pg=0.1079 v=0.6359 kl=0.2004 | 290 sps | ETA 53m 16s
+step=    79,872 ( 8.0%) | ep_ret=185.40  win=1.00  wr5=6% | pg=0.1095 v=0.4913 kl=0.1579 | 285 sps | ETA 53m 53s
+step=    86,016 ( 8.6%) | ep_ret=n/a  win=n/a  wr5=6% | pg=0.0745 v=0.2651 kl=0.1244 | 278 sps | ETA 54m 52s
+step=    92,160 ( 9.2%) | ep_ret=217.20  win=1.00  wr5=8% | pg=0.0247 v=0.5288 kl=0.0740 | 271 sps | ETA 55m 45s
+step=    98,304 ( 9.8%) | ep_ret=200.35  win=0.00  wr5=8% | pg=0.0435 v=0.1875 kl=0.0492 | 265 sps | ETA 56m 40s
+step=   104,448 (10.4%) | ep_ret=n/a  win=n/a  wr5=8% | pg=0.0316 v=0.2474 kl=0.0856 | 261 sps | ETA 57m 09s
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-naiveMCTSAI_step=104448.pt
+[eval] step=104,448 | playing 50 games vs naiveMCTSAI...
+/home/rhatos/.conda/envs/feudalenv/lib/python3.9/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+[eval] step=104,448 | winrate=6.0% (target 90%)
+step=   110,592 (11.1%) | ep_ret=n/a  win=n/a  wr5=8% | pg=0.0584 v=0.7149 kl=0.0927 | 162 sps | ETA 1h 31m
+step=   116,736 (11.7%) | ep_ret=142.40  win=1.00  wr5=10% | pg=0.0695 v=0.7207 kl=0.1052 | 163 sps | ETA 1h 30m
+step=   122,880 (12.3%) | ep_ret=211.73  win=0.00  wr5=8% | pg=0.0767 v=0.4020 kl=0.1223 | 164 sps | ETA 1h 28m
+step=   129,024 (12.9%) | ep_ret=n/a  win=n/a  wr5=8% | pg=0.0567 v=0.4014 kl=0.0861 | 160 sps | ETA 1h 30m
+step=   135,168 (13.5%) | ep_ret=230.40  win=1.00  wr5=9% | pg=0.0238 v=0.3537 kl=0.0478 | 148 sps | ETA 1h 37m
+step=   141,312 (14.1%) | ep_ret=202.40  win=0.00  wr5=8% | pg=0.0335 v=0.1284 kl=0.0598 | 138 sps | ETA 1h 43m
+step=   147,456 (14.7%) | ep_ret=204.17  win=0.00  wr5=8% | pg=0.0312 v=0.1702 kl=0.0503 | 135 sps | ETA 1h 45m
+step=   153,600 (15.4%) | ep_ret=n/a  win=n/a  wr5=8% | pg=0.0282 v=0.3748 kl=0.0663 | 130 sps | ETA 1h 48m
+step=   159,744 (16.0%) | ep_ret=n/a  win=n/a  wr5=8% | pg=0.0490 v=0.6379 kl=0.0727 | 124 sps | ETA 1h 52m
+step=   165,888 (16.6%) | ep_ret=189.15  win=0.50  wr5=10% | pg=0.0527 v=0.5764 kl=0.0876 | 119 sps | ETA 1h 56m
+step=   172,032 (17.2%) | ep_ret=202.40  win=0.33  wr5=10% | pg=0.0523 v=0.3616 kl=0.0881 | 117 sps | ETA 1h 58m
+step=   178,176 (17.8%) | ep_ret=n/a  win=n/a  wr5=10% | pg=0.0524 v=0.3839 kl=0.0429 | 114 sps | ETA 2h 00m
+step=   184,320 (18.4%) | ep_ret=205.40  win=0.00  wr5=10% | pg=0.0385 v=0.1739 kl=0.0611 | 110 sps | ETA 2h 03m
+step=   190,464 (19.0%) | ep_ret=204.40  win=0.00  wr5=9% | pg=0.0334 v=0.2072 kl=0.0641 | 106 sps | ETA 2h 07m
+step=   196,608 (19.7%) | ep_ret=200.08  win=0.00  wr5=9% | pg=0.0245 v=0.2148 kl=0.0384 | 104 sps | ETA 2h 08m
+step=   202,752 (20.3%) | ep_ret=n/a  win=n/a  wr5=9% | pg=0.0248 v=0.3075 kl=0.0446 | 103 sps | ETA 2h 08m
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-naiveMCTSAI_step=202752.pt
+[eval] step=202,752 | playing 50 games vs naiveMCTSAI...
+[eval] step=202,752 | winrate=4.0% (target 90%)
+step=   208,896 (20.9%) | ep_ret=143.40  win=1.00  wr5=10% | pg=0.0247 v=0.5664 kl=0.0578 | 80 sps | ETA 2h 44m
+step=   215,040 (21.5%) | ep_ret=205.93  win=0.00  wr5=9% | pg=0.0368 v=0.5764 kl=0.0532 | 81 sps | ETA 2h 40m
+step=   221,184 (22.1%) | ep_ret=224.40  win=0.00  wr5=9% | pg=0.0414 v=0.3612 kl=0.0578 | 83 sps | ETA 2h 37m
+step=   227,328 (22.7%) | ep_ret=n/a  win=n/a  wr5=9% | pg=0.0343 v=0.3362 kl=0.0500 | 84 sps | ETA 2h 33m
+step=   233,472 (23.3%) | ep_ret=185.90  win=0.50  wr5=9% | pg=0.0265 v=0.3065 kl=0.0290 | 85 sps | ETA 2h 30m
+step=   239,616 (24.0%) | ep_ret=n/a  win=n/a  wr5=9% | pg=0.0256 v=0.1877 kl=0.0298 | 86 sps | ETA 2h 27m
+step=   245,760 (24.6%) | ep_ret=207.16  win=0.00  wr5=9% | pg=0.0215 v=0.2071 kl=0.0321 | 87 sps | ETA 2h 24m
+step=   251,904 (25.2%) | ep_ret=n/a  win=n/a  wr5=9% | pg=0.0287 v=0.2956 kl=0.0424 | 88 sps | ETA 2h 21m
+step=   258,048 (25.8%) | ep_ret=207.40  win=0.00  wr5=9% | pg=0.0297 v=0.3640 kl=0.0474 | 89 sps | ETA 2h 18m
+step=   264,192 (26.4%) | ep_ret=210.80  win=0.00  wr5=8% | pg=0.0346 v=0.3968 kl=0.0674 | 90 sps | ETA 2h 15m
+step=   270,336 (27.0%) | ep_ret=200.90  win=0.50  wr5=9% | pg=0.0260 v=0.3639 kl=0.0561 | 91 sps | ETA 2h 13m
+step=   276,480 (27.6%) | ep_ret=n/a  win=n/a  wr5=9% | pg=0.0301 v=0.2670 kl=0.0464 | 92 sps | ETA 2h 10m
+step=   282,624 (28.3%) | ep_ret=201.90  win=0.00  wr5=9% | pg=0.0254 v=0.2190 kl=0.0365 | 93 sps | ETA 2h 08m
+step=   288,768 (28.9%) | ep_ret=195.23  win=0.00  wr5=9% | pg=0.0259 v=0.2064 kl=0.0385 | 94 sps | ETA 2h 05m
+step=   294,912 (29.5%) | ep_ret=n/a  win=n/a  wr5=9% | pg=0.0236 v=0.2524 kl=0.0271 | 95 sps | ETA 2h 03m
+step=   301,056 (30.1%) | ep_ret=245.40  win=1.00  wr5=10% | pg=0.0253 v=0.8327 kl=0.0233 | 96 sps | ETA 2h 01m
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-naiveMCTSAI_step=301056.pt
+[eval] step=301,056 | playing 50 games vs naiveMCTSAI...
+[eval] step=301,056 | winrate=10.0% (target 90%)
+step=   307,200 (30.7%) | ep_ret=211.90  win=0.00  wr5=9% | pg=0.0266 v=0.3792 kl=0.0412 | 85 sps | ETA 2h 16m
+step=   313,344 (31.3%) | ep_ret=206.90  win=0.00  wr5=8% | pg=0.0316 v=0.3351 kl=0.0381 | 86 sps | ETA 2h 13m
+step=   319,488 (31.9%) | ep_ret=193.20  win=0.00  wr5=8% | pg=0.0350 v=0.3124 kl=0.0363 | 87 sps | ETA 2h 11m
+step=   325,632 (32.6%) | ep_ret=200.80  win=0.00  wr5=8% | pg=0.0261 v=0.3171 kl=0.0482 | 87 sps | ETA 2h 08m
+step=   331,776 (33.2%) | ep_ret=n/a  win=n/a  wr5=8% | pg=0.0264 v=0.2041 kl=0.0210 | 88 sps | ETA 2h 06m
+step=   337,920 (33.8%) | ep_ret=206.87  win=0.14  wr5=9% | pg=0.0142 v=0.7060 kl=0.0253 | 89 sps | ETA 2h 04m
+step=   344,064 (34.4%) | ep_ret=n/a  win=n/a  wr5=9% | pg=0.0214 v=0.2443 kl=0.0344 | 90 sps | ETA 2h 01m
+step=   350,208 (35.0%) | ep_ret=215.93  win=0.33  wr5=10% | pg=0.0144 v=0.7224 kl=0.0439 | 91 sps | ETA 1h 59m
+step=   356,352 (35.6%) | ep_ret=216.60  win=0.75  wr5=11% | pg=0.0296 v=0.9603 kl=0.0477 | 91 sps | ETA 1h 57m
+step=   362,496 (36.2%) | ep_ret=159.60  win=-0.33  wr5=11% | pg=0.0224 v=0.5843 kl=0.0190 | 92 sps | ETA 1h 55m
+step=   368,640 (36.9%) | ep_ret=n/a  win=n/a  wr5=11% | pg=0.0272 v=0.3597 kl=0.0398 | 93 sps | ETA 1h 53m
+step=   374,784 (37.5%) | ep_ret=214.80  win=0.50  wr5=11% | pg=0.0196 v=0.5220 kl=0.0316 | 94 sps | ETA 1h 51m
+step=   380,928 (38.1%) | ep_ret=n/a  win=n/a  wr5=11% | pg=0.0456 v=0.2185 kl=0.0226 | 94 sps | ETA 1h 49m
+step=   387,072 (38.7%) | ep_ret=205.95  win=0.08  wr5=12% | pg=0.0121 v=0.3254 kl=0.0251 | 95 sps | ETA 1h 47m
+step=   393,216 (39.3%) | ep_ret=224.20  win=0.00  wr5=11% | pg=0.0171 v=0.2096 kl=0.0295 | 96 sps | ETA 1h 45m
+step=   399,360 (39.9%) | ep_ret=194.10  win=0.00  wr5=10% | pg=0.0282 v=0.3503 kl=0.0396 | 96 sps | ETA 1h 44m
+step=   405,504 (40.6%) | ep_ret=193.10  win=0.00  wr5=10% | pg=0.0226 v=0.3492 kl=0.0368 | 97 sps | ETA 1h 42m
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-naiveMCTSAI_step=405504.pt
+[eval] step=405,504 | playing 50 games vs naiveMCTSAI...
+[eval] step=405,504 | winrate=24.0% (target 90%)
+step=   411,648 (41.2%) | ep_ret=171.45  win=-0.25  wr5=10% | pg=0.0226 v=0.5194 kl=0.0371 | 88 sps | ETA 1h 51m
+step=   417,792 (41.8%) | ep_ret=n/a  win=n/a  wr5=10% | pg=0.0336 v=0.3699 kl=0.0295 | 89 sps | ETA 1h 49m
+step=   423,936 (42.4%) | ep_ret=209.56  win=0.60  wr5=12% | pg=0.0194 v=0.6764 kl=0.0234 | 90 sps | ETA 1h 47m
+step=   430,080 (43.0%) | ep_ret=220.40  win=0.67  wr5=13% | pg=0.0194 v=0.5136 kl=0.0367 | 90 sps | ETA 1h 45m
+step=   436,224 (43.6%) | ep_ret=200.00  win=0.00  wr5=13% | pg=0.0188 v=0.2656 kl=0.0353 | 91 sps | ETA 1h 43m
+step=   442,368 (44.2%) | ep_ret=205.40  win=0.00  wr5=13% | pg=0.0314 v=0.2379 kl=0.0342 | 91 sps | ETA 1h 41m
+step=   448,512 (44.9%) | ep_ret=211.90  win=0.25  wr5=14% | pg=0.0236 v=0.7089 kl=0.0274 | 92 sps | ETA 1h 39m
+step=   454,656 (45.5%) | ep_ret=178.10  win=0.00  wr5=14% | pg=0.0249 v=0.4620 kl=0.0360 | 93 sps | ETA 1h 38m
+step=   460,800 (46.1%) | ep_ret=205.40  win=-0.25  wr5=14% | pg=0.0168 v=0.4453 kl=0.0297 | 93 sps | ETA 1h 36m
+step=   466,944 (46.7%) | ep_ret=n/a  win=n/a  wr5=14% | pg=0.0190 v=0.3261 kl=0.0234 | 94 sps | ETA 1h 34m
+step=   473,088 (47.3%) | ep_ret=197.10  win=0.00  wr5=14% | pg=0.0262 v=0.3114 kl=0.0307 | 94 sps | ETA 1h 33m
+step=   479,232 (47.9%) | ep_ret=227.40  win=0.00  wr5=14% | pg=0.0212 v=0.2668 kl=0.0434 | 95 sps | ETA 1h 31m
+step=   485,376 (48.5%) | ep_ret=203.43  win=0.00  wr5=14% | pg=0.0268 v=0.2310 kl=0.0190 | 95 sps | ETA 1h 30m
+step=   491,520 (49.2%) | ep_ret=210.40  win=0.50  wr5=15% | pg=0.0142 v=0.5491 kl=0.0331 | 96 sps | ETA 1h 28m
+step=   497,664 (49.8%) | ep_ret=217.07  win=0.33  wr5=16% | pg=0.0175 v=0.5483 kl=0.0230 | 96 sps | ETA 1h 26m
+step=   503,808 (50.4%) | ep_ret=198.15  win=0.00  wr5=16% | pg=0.0371 v=0.3673 kl=0.0306 | 97 sps | ETA 1h 25m
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-naiveMCTSAI_step=503808.pt
+[eval] step=503,808 | playing 50 games vs naiveMCTSAI...
+[eval] step=503,808 | winrate=16.0% (target 90%)
+step=   509,952 (51.0%) | ep_ret=210.40  win=0.00  wr5=15% | pg=0.0261 v=0.3332 kl=0.0254 | 90 sps | ETA 1h 31m
+step=   516,096 (51.6%) | ep_ret=n/a  win=n/a  wr5=15% | pg=0.0265 v=0.3330 kl=0.0514 | 90 sps | ETA 1h 29m
+step=   522,240 (52.2%) | ep_ret=201.60  win=0.20  wr5=16% | pg=0.0192 v=0.4091 kl=0.0242 | 91 sps | ETA 1h 27m
+step=   528,384 (52.8%) | ep_ret=205.74  win=0.00  wr5=16% | pg=0.0268 v=0.2376 kl=0.0206 | 91 sps | ETA 1h 26m
+step=   534,528 (53.5%) | ep_ret=n/a  win=n/a  wr5=16% | pg=0.0188 v=0.2715 kl=0.0275 | 92 sps | ETA 1h 24m
+step=   540,672 (54.1%) | ep_ret=197.90  win=0.50  wr5=17% | pg=0.0165 v=0.5060 kl=0.0226 | 92 sps | ETA 1h 23m
+step=   546,816 (54.7%) | ep_ret=216.23  win=0.17  wr5=17% | pg=0.0134 v=0.5401 kl=0.0339 | 93 sps | ETA 1h 21m
+step=   552,960 (55.3%) | ep_ret=209.40  win=0.00  wr5=17% | pg=0.0291 v=0.3327 kl=0.0266 | 93 sps | ETA 1h 20m
+step=   559,104 (55.9%) | ep_ret=190.73  win=0.67  wr5=18% | pg=0.0271 v=0.6018 kl=0.0333 | 94 sps | ETA 1h 18m
+step=   565,248 (56.5%) | ep_ret=n/a  win=n/a  wr5=18% | pg=0.0218 v=0.3905 kl=0.0285 | 94 sps | ETA 1h 17m
+step=   571,392 (57.1%) | ep_ret=208.60  win=-0.20  wr5=18% | pg=0.0107 v=0.4130 kl=0.0169 | 95 sps | ETA 1h 15m
+step=   577,536 (57.8%) | ep_ret=216.97  win=0.14  wr5=18% | pg=0.0156 v=0.7487 kl=0.0249 | 95 sps | ETA 1h 14m
+step=   583,680 (58.4%) | ep_ret=n/a  win=n/a  wr5=18% | pg=0.0202 v=0.2998 kl=0.0196 | 95 sps | ETA 1h 12m
+step=   589,824 (59.0%) | ep_ret=198.07  win=0.33  wr5=18% | pg=0.0159 v=0.4763 kl=0.0245 | 96 sps | ETA 1h 11m
+step=   595,968 (59.6%) | ep_ret=186.26  win=0.43  wr5=18% | pg=0.0131 v=0.8341 kl=0.0270 | 96 sps | ETA 1h 09m
+step=   602,112 (60.2%) | ep_ret=200.07  win=0.33  wr5=19% | pg=0.0188 v=0.3112 kl=0.0212 | 97 sps | ETA 1h 08m
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-naiveMCTSAI_step=602112.pt
+[eval] step=602,112 | playing 50 games vs naiveMCTSAI...
+[eval] step=602,112 | winrate=14.0% (target 90%)
+step=   608,256 (60.8%) | ep_ret=208.80  win=0.00  wr5=19% | pg=0.0236 v=0.4541 kl=0.0206 | 91 sps | ETA 1h 12m
+step=   614,400 (61.4%) | ep_ret=153.40  win=1.00  wr5=20% | pg=0.0143 v=0.3996 kl=0.0249 | 91 sps | ETA 1h 10m
+step=   620,544 (62.1%) | ep_ret=209.65  win=0.25  wr5=19% | pg=0.0239 v=0.3676 kl=0.0398 | 91 sps | ETA 1h 09m
+step=   626,688 (62.7%) | ep_ret=208.80  win=0.00  wr5=18% | pg=0.0166 v=0.2736 kl=0.0173 | 92 sps | ETA 1h 07m
+step=   632,832 (63.3%) | ep_ret=144.40  win=1.00  wr5=19% | pg=0.0364 v=0.3503 kl=0.0199 | 92 sps | ETA 1h 06m
+step=   638,976 (63.9%) | ep_ret=204.40  win=0.00  wr5=18% | pg=0.0111 v=0.2851 kl=0.0209 | 93 sps | ETA 1h 04m
+step=   645,120 (64.5%) | ep_ret=212.20  win=0.20  wr5=18% | pg=0.0149 v=0.5707 kl=0.0213 | 93 sps | ETA 1h 03m
+step=   651,264 (65.1%) | ep_ret=204.40  win=0.00  wr5=18% | pg=0.0239 v=0.2684 kl=0.0285 | 93 sps | ETA 1h 02m
+step=   657,408 (65.7%) | ep_ret=198.50  win=0.00  wr5=17% | pg=0.0117 v=0.4949 kl=0.0294 | 94 sps | ETA 1h 00m
+step=   663,552 (66.4%) | ep_ret=188.07  win=-0.33  wr5=16% | pg=0.0149 v=0.6407 kl=0.0214 | 94 sps | ETA 59m 30s
+step=   669,696 (67.0%) | ep_ret=209.73  win=0.00  wr5=15% | pg=0.0188 v=0.3049 kl=0.0327 | 95 sps | ETA 58m 11s
+step=   675,840 (67.6%) | ep_ret=221.73  win=0.00  wr5=15% | pg=0.0118 v=0.2594 kl=0.0158 | 95 sps | ETA 56m 52s
+step=   681,984 (68.2%) | ep_ret=206.40  win=0.00  wr5=15% | pg=0.0191 v=0.2408 kl=0.0240 | 95 sps | ETA 55m 34s
+step=   688,128 (68.8%) | ep_ret=192.13  win=-0.17  wr5=15% | pg=0.0144 v=0.6694 kl=0.0211 | 96 sps | ETA 54m 19s
+step=   694,272 (69.4%) | ep_ret=196.45  win=0.00  wr5=15% | pg=0.0220 v=0.2918 kl=0.0143 | 96 sps | ETA 53m 03s
+step=   700,416 (70.0%) | ep_ret=208.85  win=0.25  wr5=16% | pg=0.0205 v=0.4565 kl=0.0159 | 96 sps | ETA 51m 48s
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-naiveMCTSAI_step=700416.pt
+[eval] step=700,416 | playing 50 games vs naiveMCTSAI...
+[eval] step=700,416 | winrate=18.0% (target 90%)
+step=   706,560 (70.7%) | ep_ret=234.40  win=0.00  wr5=15% | pg=0.0264 v=0.4553 kl=0.0241 | 92 sps | ETA 53m 24s
+step=   712,704 (71.3%) | ep_ret=205.33  win=0.00  wr5=15% | pg=0.0248 v=0.3537 kl=0.0286 | 92 sps | ETA 52m 04s
+step=   718,848 (71.9%) | ep_ret=205.50  win=0.00  wr5=15% | pg=0.0204 v=0.2506 kl=0.0334 | 92 sps | ETA 50m 45s
+step=   724,992 (72.5%) | ep_ret=200.67  win=0.00  wr5=15% | pg=0.0216 v=0.2140 kl=0.0235 | 93 sps | ETA 49m 27s
+step=   731,136 (73.1%) | ep_ret=214.07  win=0.00  wr5=14% | pg=0.0092 v=0.3033 kl=0.0172 | 93 sps | ETA 48m 09s
+step=   737,280 (73.7%) | ep_ret=214.40  win=0.20  wr5=15% | pg=0.0119 v=0.5125 kl=0.0203 | 93 sps | ETA 46m 51s
+step=   743,424 (74.3%) | ep_ret=209.67  win=0.00  wr5=15% | pg=0.0185 v=0.2876 kl=0.0207 | 94 sps | ETA 45m 34s
+step=   749,568 (75.0%) | ep_ret=204.65  win=0.00  wr5=14% | pg=0.0114 v=0.3205 kl=0.0200 | 94 sps | ETA 44m 17s
+step=   755,712 (75.6%) | ep_ret=203.40  win=0.00  wr5=14% | pg=0.0207 v=0.3205 kl=0.0148 | 95 sps | ETA 43m 02s
+step=   761,856 (76.2%) | ep_ret=202.73  win=0.00  wr5=13% | pg=0.0191 v=0.3130 kl=0.0160 | 95 sps | ETA 41m 47s
+step=   768,000 (76.8%) | ep_ret=206.57  win=0.17  wr5=13% | pg=0.0167 v=0.3577 kl=0.0236 | 95 sps | ETA 40m 33s
+step=   774,144 (77.4%) | ep_ret=n/a  win=n/a  wr5=13% | pg=0.0117 v=0.2417 kl=0.0229 | 96 sps | ETA 39m 19s
+step=   780,288 (78.0%) | ep_ret=208.23  win=0.17  wr5=12% | pg=0.0054 v=0.5663 kl=0.0104 | 96 sps | ETA 38m 06s
+step=   786,432 (78.6%) | ep_ret=201.40  win=0.00  wr5=12% | pg=0.0129 v=0.2777 kl=0.0152 | 96 sps | ETA 36m 54s
+step=   792,576 (79.3%) | ep_ret=189.40  win=1.00  wr5=13% | pg=0.0249 v=0.4500 kl=0.0175 | 97 sps | ETA 35m 42s
+step=   798,720 (79.9%) | ep_ret=215.80  win=0.00  wr5=11% | pg=0.0061 v=0.3785 kl=0.0224 | 97 sps | ETA 34m 31s
+step=   804,864 (80.5%) | ep_ret=189.80  win=-0.50  wr5=11% | pg=0.0144 v=0.6821 kl=0.0325 | 98 sps | ETA 33m 20s
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-naiveMCTSAI_step=804864.pt
+[eval] step=804,864 | playing 50 games vs naiveMCTSAI...
+[eval] step=804,864 | winrate=12.0% (target 90%)
+step=   811,008 (81.1%) | ep_ret=197.00  win=0.00  wr5=11% | pg=0.0119 v=0.7498 kl=0.0105 | 93 sps | ETA 33m 52s
+step=   817,152 (81.7%) | ep_ret=197.40  win=0.33  wr5=12% | pg=0.0237 v=0.3946 kl=0.0194 | 93 sps | ETA 32m 38s
+step=   823,296 (82.3%) | ep_ret=179.40  win=1.00  wr5=12% | pg=0.0083 v=0.7958 kl=0.0297 | 94 sps | ETA 31m 26s
+step=   829,440 (82.9%) | ep_ret=195.60  win=0.20  wr5=13% | pg=0.0160 v=0.3393 kl=0.0114 | 94 sps | ETA 30m 14s
+step=   835,584 (83.6%) | ep_ret=204.70  win=0.00  wr5=12% | pg=0.0159 v=0.2564 kl=0.0228 | 94 sps | ETA 29m 02s
+step=   841,728 (84.2%) | ep_ret=215.40  win=0.33  wr5=12% | pg=0.0208 v=0.3815 kl=0.0126 | 95 sps | ETA 27m 51s
+step=   847,872 (84.8%) | ep_ret=204.15  win=0.25  wr5=12% | pg=0.0262 v=0.2681 kl=0.0251 | 95 sps | ETA 26m 41s
+step=   854,016 (85.4%) | ep_ret=211.40  win=0.33  wr5=13% | pg=0.0127 v=0.5401 kl=0.0170 | 95 sps | ETA 25m 31s
+step=   860,160 (86.0%) | ep_ret=205.47  win=0.00  wr5=12% | pg=0.0244 v=0.3531 kl=0.0200 | 96 sps | ETA 24m 22s
+step=   866,304 (86.6%) | ep_ret=200.40  win=0.00  wr5=12% | pg=0.0264 v=0.3484 kl=0.0307 | 96 sps | ETA 23m 14s
+step=   872,448 (87.2%) | ep_ret=205.73  win=0.33  wr5=12% | pg=0.0290 v=0.4413 kl=0.0216 | 96 sps | ETA 22m 05s
+step=   878,592 (87.9%) | ep_ret=194.94  win=0.14  wr5=13% | pg=0.0110 v=0.5496 kl=0.0109 | 96 sps | ETA 20m 58s
+step=   884,736 (88.5%) | ep_ret=216.73  win=0.33  wr5=13% | pg=0.0122 v=0.6047 kl=0.0143 | 97 sps | ETA 19m 50s
+step=   890,880 (89.1%) | ep_ret=207.50  win=0.00  wr5=13% | pg=0.0187 v=0.4171 kl=0.0179 | 97 sps | ETA 18m 44s
+step=   897,024 (89.7%) | ep_ret=185.65  win=0.25  wr5=14% | pg=0.0143 v=0.3861 kl=0.0240 | 97 sps | ETA 17m 37s
+step=   903,168 (90.3%) | ep_ret=207.40  win=0.20  wr5=15% | pg=0.0209 v=0.3825 kl=0.0336 | 98 sps | ETA 16m 31s
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-naiveMCTSAI_step=903168.pt
+[eval] step=903,168 | playing 50 games vs naiveMCTSAI...
+[eval] step=903,168 | winrate=10.0% (target 90%)
+step=   909,312 (90.9%) | ep_ret=207.90  win=0.50  wr5=16% | pg=0.0232 v=0.3345 kl=0.0213 | 93 sps | ETA 16m 09s
+step=   915,456 (91.5%) | ep_ret=204.35  win=0.50  wr5=18% | pg=0.0211 v=0.3337 kl=0.0141 | 94 sps | ETA 15m 01s
+step=   921,600 (92.2%) | ep_ret=211.50  win=0.00  wr5=18% | pg=0.0170 v=0.2807 kl=0.0196 | 94 sps | ETA 13m 53s
+step=   927,744 (92.8%) | ep_ret=191.77  win=0.17  wr5=18% | pg=0.0290 v=0.3083 kl=0.0202 | 94 sps | ETA 12m 46s
+step=   933,888 (93.4%) | ep_ret=207.40  win=0.00  wr5=18% | pg=0.0220 v=0.3349 kl=0.0091 | 95 sps | ETA 11m 38s
+step=   940,032 (94.0%) | ep_ret=198.90  win=0.00  wr5=18% | pg=0.0195 v=0.3688 kl=0.0205 | 95 sps | ETA 10m 32s
+step=   946,176 (94.6%) | ep_ret=215.90  win=0.25  wr5=18% | pg=0.0169 v=0.7619 kl=0.0178 | 95 sps | ETA 9m 25s
+step=   952,320 (95.2%) | ep_ret=198.73  win=0.50  wr5=21% | pg=0.0093 v=0.4483 kl=0.0134 | 95 sps | ETA 8m 19s
+step=   958,464 (95.8%) | ep_ret=207.73  win=0.00  wr5=21% | pg=0.0187 v=0.2981 kl=0.0088 | 96 sps | ETA 7m 14s
+step=   964,608 (96.5%) | ep_ret=206.40  win=0.00  wr5=21% | pg=0.0288 v=0.3119 kl=0.0165 | 96 sps | ETA 6m 08s
+step=   970,752 (97.1%) | ep_ret=204.47  win=0.33  wr5=22% | pg=0.0225 v=0.4305 kl=0.0202 | 96 sps | ETA 5m 04s
+step=   976,896 (97.7%) | ep_ret=210.80  win=0.20  wr5=22% | pg=0.0191 v=0.3679 kl=0.0096 | 96 sps | ETA 3m 59s
+step=   983,040 (98.3%) | ep_ret=n/a  win=n/a  wr5=22% | pg=0.0208 v=0.3502 kl=0.0173 | 97 sps | ETA 2m 55s
+step=   989,184 (98.9%) | ep_ret=179.40  win=0.17  wr5=22% | pg=0.0105 v=0.6968 kl=0.0246 | 97 sps | ETA 1m 51s
+step=   995,328 (99.5%) | ep_ret=208.65  win=0.25  wr5=22% | pg=0.0142 v=0.7231 kl=0.0280 | 97 sps | ETA 0m 48s
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.

@@ -1,0 +1,206 @@
+diff -ru transformer_agent/base_agent.py transformer_agent/base_agent.py
+--- transformer_agent/base_agent.py	2026-04-15 10:55:55.000000000 +0200
++++ transformer_agent/base_agent.py	2026-08-07 08:22:52.000000000 +0200
+@@ -6,6 +6,47 @@
+ from torch.nn import functional as F
+ 
+ 
++# ---------------------------------------------------------------------------
++# gym-microrts 0.6.0 compatibility
++# ---------------------------------------------------------------------------
++# This package was written against the pre-0.4 gym-microrts API, where
++#   - envs.action_space.nvec was the PER-CELL layout [h*w, 6,4,4,4,4,7,49],
++#     so nvec[1:] meant "the seven action planes", and
++#   - envs.vec_client.getMasks(0) returned masks with the source-unit flag
++#     as a leading column.
++# In gym-microrts 0.6.0 the action space is FLATTENED (nvec is the seven
++# planes repeated h*w times) and the planes live in envs.action_plane_space.
++# Masks come from envs.get_action_mask(), which strips the source-unit
++# column but stashes it in envs.source_unit_mask — and setting that mask is
++# a REQUIRED side effect: envs.step() uses it to build the Java action
++# arrays, so the raw vec_client call must not be used to bypass it.
++# The helpers below detect which API is installed so the rest of the file
++# stays unchanged and works under both.
++
++def action_plane_nvec(envs):
++    """The seven per-cell action-plane sizes, on either gym-microrts API."""
++    if hasattr(envs, "action_plane_space"):          # gym-microrts >= 0.4
++        return envs.action_plane_space.nvec
++    return envs.action_space.nvec[1:]                # old per-cell layout
++
++
++def get_invalid_action_masks(envs, device):
++    """
++    Per-cell invalid-action masks in the OLD layout this package expects:
++    [num_envs, h*w, 1 + sum(planes)], leading column = source-unit flag.
++    On 0.6.0 this goes through get_action_mask() so envs.source_unit_mask
++    is refreshed before the caller steps the env.
++    """
++    if hasattr(envs, "get_action_mask"):             # gym-microrts >= 0.4
++        planes = np.asarray(envs.get_action_mask())
++        source = np.asarray(envs.source_unit_mask)
++        source = source.reshape(planes.shape[0], planes.shape[1], 1)
++        merged = np.concatenate([source.astype(planes.dtype), planes], axis=2)
++        return torch.tensor(merged, dtype=torch.bool).to(device)
++    return torch.tensor(np.array(envs.vec_client.getMasks(0)),
++                        dtype=torch.bool).to(device)
++
++
+ # What is this - conor
+ class CategoricalMasked(Categorical):
+     def __init__(self, device, probs=None, logits=None, validate_args=None, masks=[], sw=None):
+@@ -37,7 +78,7 @@
+         super(Critic, self).__init__()
+         self.embed_size = embed_size
+         self.map_size = map_size
+-        self.unit_action_space = envs.action_space.nvec[1:].sum()
++        self.unit_action_space = action_plane_nvec(envs).sum()
+         self.decoder = layer_init(nn.Linear(self.embed_size, 1), std=1)
+ 
+     # x: network's output: [seqlength(V), batch_dim, embed_size]
+@@ -57,7 +98,7 @@
+         self.device = device
+         self.embed_size = embed_size
+         self.map_size = map_size
+-        self.unit_action_space = envs.action_space.nvec[1:].sum()
++        self.unit_action_space = action_plane_nvec(envs).sum()
+         self.decoder = layer_init(nn.Linear(embed_size, self.unit_action_space), std=0.01)
+ 
+     # x: network's output: [V, num_envs, embed_size]
+@@ -136,13 +177,14 @@
+         base_out = self.forward(trimmed_x, trimmed_ent_mask)
+         logits = self.actor(base_out, player_unit_position, trimmed_unit_mask)
+         # OLD CODE - DO NOT CHANGE
+-        grid_logits = logits.view(-1, envs.action_space.nvec[1:].sum())
+-        split_logits = torch.split(grid_logits, envs.action_space.nvec[1:].tolist(), dim=1)
++        plane_nvec = action_plane_nvec(envs)
++        grid_logits = logits.view(-1, plane_nvec.sum())
++        split_logits = torch.split(grid_logits, plane_nvec.tolist(), dim=1)
+ 
+         if action is None:
+-            invalid_action_masks = torch.tensor(np.array(envs.vec_client.getMasks(0))).to(self.device)
++            invalid_action_masks = get_invalid_action_masks(envs, self.device)
+             invalid_action_masks = invalid_action_masks.view(-1, invalid_action_masks.shape[-1])
+-            split_invalid_action_masks = torch.split(invalid_action_masks[:, 1:], envs.action_space.nvec[1:].tolist(),
++            split_invalid_action_masks = torch.split(invalid_action_masks[:, 1:], plane_nvec.tolist(),
+                                                      dim=1)
+             multi_categoricals = [CategoricalMasked(self.device, logits=logits, masks=iam) for (logits, iam) in
+                                   zip(split_logits, split_invalid_action_masks)]
+@@ -150,17 +192,17 @@
+         else:
+             invalid_action_masks = invalid_action_masks.view(-1, invalid_action_masks.shape[-1])
+             action = action.view(-1, action.shape[-1]).T
+-            split_invalid_action_masks = torch.split(invalid_action_masks[:, 1:], envs.action_space.nvec[1:].tolist(),
++            split_invalid_action_masks = torch.split(invalid_action_masks[:, 1:], plane_nvec.tolist(),
+                                                      dim=1)
+             multi_categoricals = [CategoricalMasked(self.device, logits=logits, masks=iam) for (logits, iam) in
+                                   zip(split_logits, split_invalid_action_masks)]
+         logprob = torch.stack([categorical.log_prob(a) for a, categorical in zip(action, multi_categoricals)])
+         entropy = torch.stack([categorical.entropy() for categorical in multi_categoricals])
+-        num_predicted_parameters = len(envs.action_space.nvec) - 1
++        num_predicted_parameters = len(plane_nvec)
+         logprob = logprob.T.view(-1, self.map_size, num_predicted_parameters)
+         entropy = entropy.T.view(-1, self.map_size, num_predicted_parameters)
+         action = action.T.view(-1, self.map_size, num_predicted_parameters)
+-        invalid_action_masks = invalid_action_masks.view(-1, self.map_size, envs.action_space.nvec[1:].sum() + 1)
++        invalid_action_masks = invalid_action_masks.view(-1, self.map_size, plane_nvec.sum() + 1)
+         return action, logprob.sum(1).sum(1), entropy.sum(1).sum(1), invalid_action_masks
+ 
+     def get_value(self, x, entity_mask, entity_count):
+diff -ru transformer_agent/micro_rts_env.py transformer_agent/micro_rts_env.py
+--- transformer_agent/micro_rts_env.py	2026-04-23 17:28:36.000000000 +0200
++++ transformer_agent/micro_rts_env.py	2026-08-07 08:22:52.000000000 +0200
+@@ -104,13 +104,16 @@
+     else:
+         raise Exception(f"Unsupported map size {args['map_size']}")
+ 
++    # gym-microrts 0.6.0: map_paths is a LIST (map_path= no longer exists),
++    # and partial observability is an explicit flag.
+     envs = MicroRTSGridModeVecEnv(
+         num_selfplay_envs=args['num_selfplay_envs'],
+         num_bot_envs=args['num_bot_envs'],
+         max_steps=2000,
+         render_theme=2,
++        partial_obs=False,
+         ai2s=ai_opponents,
+-        map_path=map_path,
++        map_paths=[map_path],
+         reward_weight=reward_weight
+     )
+     envs = MicroRTSStatsRecorder(envs, args['gamma'])
+diff -ru transformer_agent/mixed_embedded_agent.py transformer_agent/mixed_embedded_agent.py
+--- transformer_agent/mixed_embedded_agent.py	2026-04-13 16:01:49.000000000 +0200
++++ transformer_agent/mixed_embedded_agent.py	2026-08-07 08:22:52.000000000 +0200
+@@ -4,7 +4,8 @@
+ from torch import nn
+ from torch.nn import functional as F
+ 
+-from transformer_agent.base_agent import Actor, CategoricalMasked
++from transformer_agent.base_agent import Actor, CategoricalMasked, \
++    action_plane_nvec, get_invalid_action_masks
+ from transformer_agent.weighted_agent import WeightedCritic
+ 
+ 
+@@ -108,15 +109,16 @@
+         base_out = self.forward(trimmed_x, trimmed_ent_mask)
+         logits = self.actor(base_out, player_unit_position, trimmed_unit_mask)
+         # OLD CODE - DO NOT CHANGE
+-        grid_logits = logits.view(-1, envs.action_space.nvec[1:].sum())
+-        split_logits = torch.split(grid_logits, envs.action_space.nvec[1:].tolist(), dim=1)
++        plane_nvec = action_plane_nvec(envs)
++        grid_logits = logits.view(-1, plane_nvec.sum())
++        split_logits = torch.split(grid_logits, plane_nvec.tolist(), dim=1)
+ 
+         # Called during exploration
+         if action is None:
+-            invalid_action_masks = torch.tensor(np.array(envs.vec_client.getMasks(0)), dtype=torch.bool).to(self.device)
++            invalid_action_masks = get_invalid_action_masks(envs, self.device)
+             invalid_action_masks = invalid_action_masks.view(-1, invalid_action_masks.shape[-1])
+             split_invalid_action_masks = torch.split(invalid_action_masks[:, 1:],
+-                                                     envs.action_space.nvec[1:].tolist(),
++                                                     plane_nvec.tolist(),
+                                                      dim=1)
+             multi_categoricals = [CategoricalMasked(self.device, logits=logits, masks=iam) for (logits, iam) in
+                                   zip(split_logits, split_invalid_action_masks)]
+@@ -126,17 +128,17 @@
+             invalid_action_masks = invalid_action_masks.view(-1, invalid_action_masks.shape[-1])
+             action = action.view(-1, action.shape[-1]).T
+             split_invalid_action_masks = torch.split(invalid_action_masks[:, 1:],
+-                                                     envs.action_space.nvec[1:].tolist(),
++                                                     plane_nvec.tolist(),
+                                                      dim=1)
+             multi_categoricals = [CategoricalMasked(self.device, logits=logits, masks=iam) for (logits, iam) in
+                                   zip(split_logits, split_invalid_action_masks)]
+         logprob = torch.stack([categorical.log_prob(a) for a, categorical in zip(action, multi_categoricals)])
+         entropy = torch.stack([categorical.entropy() for categorical in multi_categoricals])
+-        num_predicted_parameters = len(envs.action_space.nvec) - 1
++        num_predicted_parameters = len(plane_nvec)
+         logprob = logprob.T.view(-1, self.map_size, num_predicted_parameters)
+         entropy = entropy.T.view(-1, self.map_size, num_predicted_parameters)
+         action = action.T.view(-1, self.map_size, num_predicted_parameters)
+-        invalid_action_masks = invalid_action_masks.view(-1, self.map_size, envs.action_space.nvec[1:].sum() + 1)
++        invalid_action_masks = invalid_action_masks.view(-1, self.map_size, plane_nvec.sum() + 1)
+         return action, logprob.sum(1).sum(1), entropy.sum(1).sum(1), invalid_action_masks
+ 
+     def get_value(self, x, entity_mask, entity_count, player_unit_mask, enemy_unit_mask, neutral_unit_mask):
+diff -ru transformer_agent/weighted_agent.py transformer_agent/weighted_agent.py
+--- transformer_agent/weighted_agent.py	2026-04-13 16:01:49.000000000 +0200
++++ transformer_agent/weighted_agent.py	2026-08-07 08:22:52.000000000 +0200
+@@ -3,7 +3,7 @@
+ from torch import nn
+ from torch.nn import functional as F
+ 
+-from transformer_agent.base_agent import layer_init, Agent
++from transformer_agent.base_agent import layer_init, Agent, action_plane_nvec
+ 
+ 
+ class WeightedCritic(nn.Module):
+@@ -11,7 +11,7 @@
+         super(WeightedCritic, self).__init__()
+         self.device = device
+         self.embed_size = embed_size
+-        self.unit_action_space = envs.action_space.nvec[1:].sum()
++        self.unit_action_space = action_plane_nvec(envs).sum()
+         self.decoder = layer_init(nn.Linear(self.embed_size, 1), std=1)
+         self.value_calc = layer_init(nn.Linear(6, 1), std=1)
+ 

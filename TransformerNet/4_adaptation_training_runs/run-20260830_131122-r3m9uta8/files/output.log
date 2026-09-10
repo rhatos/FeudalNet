@@ -1,0 +1,38 @@
+New wandb run: agent-tiamat (r3m9uta8)
+Run id r3m9uta8 written to run_id_finetune.txt
+[34m[1mwandb[0m: [33mWARNING[0m The get_url method is deprecated and will be removed in a future release. Please use `run.url` instead.
+Run config (74 parameters) → models/configs/agent-tiamat_r3m9uta8_config.csv
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Envs: 24 x tiamat on maps/16x16/basesWorkers16x16.xml
+/home/rhatos/.conda/envs/feudalenv/lib/python3.9/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+Model: embedded | parameters: 661,854
+  optimizer: none to restore (KeyError) — starting fresh
+Loaded example_models/16x16/agent.pt
+Fine-tuning vs tiamat for 1,000,000 steps, counting from 0
+Fine-tuning | 24 envs vs tiamat | 1,000,000 steps | map 16x16 | batch 6144 / minibatch 1536 | wandb: agent-tiamat
+step=     6,144 ( 0.6%) | ep_ret=n/a  win=n/a  wr5=n/a | pg=0.0199 v=0.1696 kl=0.0988 | 438 sps | ETA 37m 48s
+step=    12,288 ( 1.2%) | ep_ret=87.38  win=1.00  wr5=100% (10/24 envs) | pg=0.0679 v=0.9072 kl=0.2765 | 320 sps | ETA 51m 23s
+step=    18,432 ( 1.8%) | ep_ret=130.03  win=1.00  wr5=100% (16/24 envs) | pg=0.0858 v=0.8183 kl=0.1564 | 233 sps | ETA 1h 10m
+step=    24,576 ( 2.5%) | ep_ret=125.20  win=0.82  wr5=95% (21/24 envs) | pg=0.0682 v=1.0012 kl=0.1603 | 198 sps | ETA 1h 22m
+step=    30,720 ( 3.1%) | ep_ret=126.80  win=1.00  wr5=95% (22/24 envs) | pg=0.0418 v=0.6809 kl=0.1408 | 165 sps | ETA 1h 37m
+step=    36,864 ( 3.7%) | ep_ret=126.86  win=0.80  wr5=92% | pg=0.0547 v=1.0074 kl=0.1208 | 135 sps | ETA 1h 58m
+step=    43,008 ( 4.3%) | ep_ret=100.97  win=0.71  wr5=92% | pg=0.0360 v=0.4538 kl=0.0865 | 116 sps | ETA 2h 16m
+step=    49,152 ( 4.9%) | ep_ret=107.36  win=0.86  wr5=92% | pg=0.0380 v=0.6573 kl=0.0759 | 105 sps | ETA 2h 31m
+step=    55,296 ( 5.5%) | ep_ret=116.18  win=0.75  wr5=92% | pg=0.0450 v=0.5066 kl=0.0731 | 101 sps | ETA 2h 35m
+step=    61,440 ( 6.1%) | ep_ret=113.00  win=0.85  wr5=92% | pg=0.0137 v=0.7039 kl=0.0376 | 98 sps | ETA 2h 39m
+step=    67,584 ( 6.8%) | ep_ret=138.16  win=1.00  wr5=92% | pg=0.0266 v=0.5255 kl=0.0868 | 94 sps | ETA 2h 45m
+step=    73,728 ( 7.4%) | ep_ret=112.29  win=0.85  wr5=93% | pg=0.0292 v=0.5383 kl=0.0736 | 92 sps | ETA 2h 48m
+step=    79,872 ( 8.0%) | ep_ret=131.45  win=1.00  wr5=93% | pg=0.0406 v=0.4833 kl=0.0829 | 91 sps | ETA 2h 48m
+step=    86,016 ( 8.6%) | ep_ret=125.83  win=1.00  wr5=94% | pg=0.0372 v=0.5534 kl=0.0975 | 90 sps | ETA 2h 49m
+step=    92,160 ( 9.2%) | ep_ret=131.42  win=1.00  wr5=94% | pg=0.0412 v=0.4656 kl=0.0495 | 89 sps | ETA 2h 49m
+step=    98,304 ( 9.8%) | ep_ret=81.85  win=1.00  wr5=95% | pg=0.0248 v=0.5194 kl=0.0708 | 89 sps | ETA 2h 49m
+step=   104,448 (10.4%) | ep_ret=118.35  win=1.00  wr5=95% | pg=0.0261 v=0.7722 kl=0.0714 | 87 sps | ETA 2h 51m
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-tiamat_step=104448.pt
+[eval] step=104,448 | playing 50 games vs tiamat...
+/home/rhatos/.conda/envs/feudalenv/lib/python3.9/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+[eval] step=104,448 | winrate=96.0% (target 90%)
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Early stopping: winrate 96.0% >= 90%

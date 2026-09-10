@@ -1,0 +1,175 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{11}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Berner et~al\mbox{.}(2019)]%
+        {dota2five}
+\bibfield{author}{\bibinfo{person}{Christopher Berner} {et~al\mbox{.}}}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Dota 2 with Large Scale Deep Reinforcement
+  Learning}.
+\newblock \bibinfo{journal}{\emph{OpenAI Blog}} (\bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[Cobbe et~al\mbox{.}(2021)]%
+        {PPG}
+\bibfield{author}{\bibinfo{person}{Karl Cobbe} {et~al\mbox{.}}}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Phasic policy gradient}. In
+  \bibinfo{booktitle}{\emph{International Conference on Machine Learning}}.
+  PMLR, \bibinfo{pages}{2020--2027}.
+\newblock
+
+
+\bibitem[Espeholt et~al\mbox{.}(2018)]%
+        {impala-cnn}
+\bibfield{author}{\bibinfo{person}{Lasse Espeholt} {et~al\mbox{.}}}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{IMPALA}: Scalable Distributed Deep-{RL} with
+  Importance Weighted Actor-Learner Architectures}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 35th International Conference on
+  Machine Learning}} \emph{(\bibinfo{series}{Proceedings of Machine Learning
+  Research}, Vol.~\bibinfo{volume}{80})},
+  \bibfield{editor}{\bibinfo{person}{Jennifer Dy} {and}
+  \bibinfo{person}{Andreas Krause}} (Eds.). \bibinfo{publisher}{PMLR},
+  \bibinfo{pages}{1407--1416}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.mlr.press/v80/espeholt18a.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Huang et~al\mbox{.}(2021)]%
+        {micrortsgridnet}
+\bibfield{author}{\bibinfo{person}{Shengyi Huang} {et~al\mbox{.}}}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Gym-µRTS: Toward Affordable Full Game Real-time
+  Strategy Games Research with Deep Reinforcement Learning}.
+  \bibinfo{pages}{1--8}.
+\newblock
+\href{https://doi.org/10.1109/CoG52621.2021.9619076}{doi:\nolinkurl{10.1109/CoG52621.2021.9619076}}
+
+
+\bibitem[Levy et~al\mbox{.}(2017)]%
+        {HAC}
+\bibfield{author}{\bibinfo{person}{Andrew Levy} {et~al\mbox{.}}}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Learning Multi-Level Hierarchies with Hindsight}.
+  In \bibinfo{booktitle}{\emph{International Conference on Learning
+  Representations}}.
+\newblock
+
+
+\bibitem[Nachum et~al\mbox{.}(2019)]%
+        {badhrl}
+\bibfield{author}{\bibinfo{person}{Ofir Nachum} {et~al\mbox{.}}}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Why Does Hierarchy (Sometimes) Work So Well in
+  Reinforcement Learning?}. In \bibinfo{booktitle}{\emph{International
+  Conference on Learning Representations}}.
+\newblock
+
+
+\bibitem[Ontanon(2013)]%
+        {microrts}
+\bibfield{author}{\bibinfo{person}{Santiago Ontanon}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{The Combinatorial Multi-Armed Bandit Problem and
+  Its Application to Real-Time Strategy Games}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the AAAI Conference on
+  Artificial Intelligence and Interactive Digital Entertainment}}
+  \bibinfo{volume}{9} (\bibinfo{date}{10} \bibinfo{year}{2013}),
+  \bibinfo{pages}{58--64}.
+\newblock
+\href{https://doi.org/10.1609/aiide.v9i1.12681}{doi:\nolinkurl{10.1609/aiide.v9i1.12681}}
+
+
+\bibitem[Vezhnevets et~al\mbox{.}(2017)]%
+        {FuN}
+\bibfield{author}{\bibinfo{person}{Alexander Vezhnevets} {et~al\mbox{.}}}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{FeUdal networks for hierarchical reinforcement
+  learning}. In \bibinfo{booktitle}{\emph{Proceedings of the 34th International
+  Conference on Machine Learning - Volume 70}} (Sydney, NSW, Australia)
+  \emph{(\bibinfo{series}{ICML'17})}. \bibinfo{publisher}{JMLR.org},
+  \bibinfo{pages}{3540–3549}.
+\newblock
+
+
+\bibitem[Vinyals et~al\mbox{.}(2019)]%
+        {alphastar}
+\bibfield{author}{\bibinfo{person}{Oriol Vinyals} {et~al\mbox{.}}}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Grandmaster level in StarCraft II using multi-agent
+  reinforcement learning}.
+\newblock \bibinfo{journal}{\emph{Nature}} \bibinfo{volume}{575},
+  \bibinfo{number}{7782} (\bibinfo{date}{01 Nov} \bibinfo{year}{2019}),
+  \bibinfo{pages}{350--354}.
+\newblock
+\showISSN{1476-4687}
+\href{https://doi.org/10.1038/s41586-019-1724-z}{doi:\nolinkurl{10.1038/s41586-019-1724-z}}
+
+
+\bibitem[Zhang et~al\mbox{.}(2025)]%
+        {DT-HRL}
+\bibfield{author}{\bibinfo{person}{Junyang Zhang} {et~al\mbox{.}}}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{DT-HRL: Mastering Long-Sequence Manipulation with
+  Reimagined Hierarchical Reinforcement Learning}.
+\newblock \bibinfo{journal}{\emph{Biomimetics}} \bibinfo{volume}{10},
+  \bibinfo{number}{9} (\bibinfo{year}{2025}).
+\newblock
+\showISSN{2313-7673}
+\href{https://doi.org/10.3390/biomimetics10090577}{doi:\nolinkurl{10.3390/biomimetics10090577}}
+
+
+\bibitem[Zwingenberger(2023)]%
+        {transformernet}
+\bibfield{author}{\bibinfo{person}{Niklas Zwingenberger}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Transformers as Policies for Variable Action
+  Environments}.
+\newblock \bibinfo{journal}{\emph{CoRR}}  \bibinfo{volume}{abs/2301.03679}
+  (\bibinfo{year}{2023}).
+\newblock
+\showeprint[arXiv]{2301.03679}
+\href{https://doi.org/10.48550/ARXIV.2301.03679}{doi:\nolinkurl{10.48550/ARXIV.2301.03679}}
+
+
+\end{thebibliography}

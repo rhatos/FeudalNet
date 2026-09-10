@@ -1,0 +1,199 @@
+_wandb:
+    value:
+        cli_version: 0.26.1
+        code_path: code/finetune_opponent_norender.py
+        e:
+            pc437lcc5obcp8z8i68jvlwqsabzy84v:
+                args:
+                    - --checkpoint
+                    - models/tqlgxayp_GOOD.pt
+                    - --opponent
+                    - izanagi
+                    - --max-steps
+                    - "1000000"
+                    - --num-workers
+                    - "48"
+                    - --num-steps
+                    - "50"
+                    - --lr
+                    - "3e-4"
+                    - --entropy-coef
+                    - "0.015"
+                    - --n-pi
+                    - "2"
+                    - --e-aux
+                    - "6"
+                    - --value-coef
+                    - "1.0"
+                    - --eval-every
+                    - "100000"
+                    - --eval-games
+                    - "50"
+                    - --eval-workers
+                    - "48"
+                    - --eval-winrate
+                    - "0.90"
+                    - --eval-record
+                    - "False"
+                codePath: finetune_opponent_norender.py
+                codePathLocal: finetune_opponent_norender.py
+                cpu_count: 24
+                cpu_count_logical: 32
+                cudaVersion: "13.3"
+                disk:
+                    /:
+                        total: "982291398656"
+                        used: "381834698752"
+                email: rhatking@proton.me
+                executable: /home/rhatos/.conda/envs/feudalenv/bin/python
+                gpu: NVIDIA GeForce RTX 4060 Ti
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 4352
+                      memoryTotal: "17175674880"
+                      name: NVIDIA GeForce RTX 4060 Ti
+                      uuid: GPU-02520409-840c-ca85-6043-226cee3b8318
+                host: magi
+                memory:
+                    total: "33305235456"
+                os: Linux-7.1.7-zen1-1-zen-x86_64-with-glibc2.44
+                program: /home/rhatos/wiki/Honours/Project/ProjectCode/feudalnet/finetune_opponent_norender.py
+                python: CPython 3.9.7
+                root: /home/rhatos/wiki/Honours/Project/ProjectCode/feudalnet
+                startedAt: "2026-08-27T09:35:34.680745Z"
+                writerId: pc437lcc5obcp8z8i68jvlwqsabzy84v
+        m: []
+        python_version: 3.9.7
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 3
+                - 13
+                - 16
+                - 62
+            "4": 3.9.7
+            "5": 0.26.1
+            "10":
+                - 21
+            "12": 0.26.1
+            "13": linux-x86_64
+T_M:
+    value: 160
+T_W:
+    value: 100
+alpha:
+    value: 0.5
+checkpoint:
+    value: models/tqlgxayp_GOOD.pt
+config_csv:
+    value: null
+config_csv_enabled:
+    value: true
+cosine:
+    value: false
+cuda:
+    value: true
+device:
+    value: cuda
+dilation:
+    value: 10
+e_aux:
+    value: 6
+enemy_dim:
+    value: 64
+enemy_layers:
+    value: 4
+entropy_coef:
+    value: 0.015
+eps:
+    value: 0.0001
+eval_every:
+    value: 100000
+eval_games:
+    value: 50
+eval_opponent:
+    value: izanagi
+eval_record:
+    value: false
+eval_video_length:
+    value: 2000
+eval_winrate:
+    value: 0.9
+eval_workers:
+    value: 48
+export_only:
+    value: false
+finetune_opponent:
+    value: izanagi
+gae_lambda:
+    value: 0.95
+gamma_m:
+    value: 0.99
+gamma_w:
+    value: 0.99
+grad_clip:
+    value: 0.5
+hidden_dim:
+    value: 128
+in_channels:
+    value: 27
+lr:
+    value: 0.0003
+manager_heads:
+    value: 4
+manager_layers:
+    value: 6
+map_h:
+    value: 16
+map_w:
+    value: 16
+max_steps:
+    value: 1000000
+n_pi:
+    value: 2
+num_steps:
+    value: 50
+num_workers:
+    value: 48
+opponent:
+    value: izanagi
+opponents:
+    value:
+        - izanagi
+out_checkpoint:
+    value: models/tqlgxayp_GOOD-izanagi.pt
+reset_optimizer:
+    value: false
+resume:
+    value: false
+resume_from:
+    value: null
+resume_path:
+    value: null
+run_id_file:
+    value: run_id_finetune.txt
+run_name:
+    value: tqlgxayp_GOOD-izanagi
+save_dir:
+    value: models
+seed:
+    value: 0
+source_checkpoint:
+    value: models/tqlgxayp_GOOD.pt
+time_horizon:
+    value: 25
+value_coef:
+    value: 1
+wandb_entity:
+    value: null
+wandb_project:
+    value: fun-microrts
+worker_heads:
+    value: 4
+worker_layers:
+    value: 4

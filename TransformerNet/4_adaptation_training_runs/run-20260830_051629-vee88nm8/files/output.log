@@ -1,0 +1,214 @@
+New wandb run: agent-izanagi (vee88nm8)
+Run id vee88nm8 written to run_id_finetune.txt
+wandb: WARNING The get_url method is deprecated and will be removed in a future release. Please use `run.url` instead.
+Run config (74 parameters) → models/configs/agent-izanagi_vee88nm8_config.csv
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Envs: 24 x izanagi on maps/16x16/basesWorkers16x16.xml
+/home/rhatos/.conda/envs/feudalenv/lib/python3.9/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+Model: embedded | parameters: 661,854
+  optimizer: none to restore (KeyError) — starting fresh
+Loaded example_models/16x16/agent.pt
+Fine-tuning vs izanagi for 1,000,000 steps, counting from 0
+Fine-tuning | 24 envs vs izanagi | 1,000,000 steps | map 16x16 | batch 6144 / minibatch 1536 | wandb: agent-izanagi
+step=     6,144 ( 0.6%) | ep_ret=n/a  win=n/a  wr5=n/a | pg=0.0243 v=0.1684 kl=0.0833 | 113 sps | ETA 2h 26m
+step=    12,288 ( 1.2%) | ep_ret=92.40  win=1.00  wr5=100% (4/24 envs) | pg=0.0731 v=0.9500 kl=0.3184 | 106 sps | ETA 2h 35m
+step=    18,432 ( 1.8%) | ep_ret=120.54  win=1.00  wr5=100% (11/24 envs) | pg=0.1366 v=0.6456 kl=0.3721 | 94 sps | ETA 2h 54m
+step=    24,576 ( 2.5%) | ep_ret=142.15  win=1.00  wr5=100% (15/24 envs) | pg=0.0929 v=0.9354 kl=0.2713 | 90 sps | ETA 3h 01m
+step=    30,720 ( 3.1%) | ep_ret=152.84  win=0.60  wr5=94% (17/24 envs) | pg=0.0892 v=0.8914 kl=0.2447 | 92 sps | ETA 2h 55m
+step=    36,864 ( 3.7%) | ep_ret=125.46  win=0.80  wr5=89% (19/24 envs) | pg=0.0623 v=1.0164 kl=0.1933 | 94 sps | ETA 2h 50m
+step=    43,008 ( 4.3%) | ep_ret=123.70  win=0.00  wr5=87% (19/24 envs) | pg=0.0472 v=0.5941 kl=0.1325 | 96 sps | ETA 2h 46m
+step=    49,152 ( 4.9%) | ep_ret=159.17  win=0.33  wr5=67% | pg=0.0520 v=1.0625 kl=0.1418 | 96 sps | ETA 2h 44m
+step=    55,296 ( 5.5%) | ep_ret=135.34  win=0.43  wr5=65% | pg=0.0443 v=0.7509 kl=0.0823 | 97 sps | ETA 2h 41m
+step=    61,440 ( 6.1%) | ep_ret=110.30  win=1.00  wr5=74% | pg=0.0472 v=0.5988 kl=0.0984 | 97 sps | ETA 2h 40m
+step=    67,584 ( 6.8%) | ep_ret=120.13  win=0.83  wr5=72% | pg=0.0539 v=0.8008 kl=0.0948 | 98 sps | ETA 2h 38m
+step=    73,728 ( 7.4%) | ep_ret=149.40  win=1.00  wr5=73% | pg=0.0554 v=0.7023 kl=0.1015 | 92 sps | ETA 2h 48m
+step=    79,872 ( 8.0%) | ep_ret=158.11  win=0.44  wr5=73% | pg=0.0624 v=1.2898 kl=0.0831 | 86 sps | ETA 2h 58m
+step=    86,016 ( 8.6%) | ep_ret=150.90  win=0.00  wr5=72% | pg=0.0410 v=0.7047 kl=0.0812 | 86 sps | ETA 2h 56m
+step=    92,160 ( 9.2%) | ep_ret=143.78  win=0.62  wr5=72% | pg=0.0489 v=0.7585 kl=0.0752 | 87 sps | ETA 2h 54m
+step=    98,304 ( 9.8%) | ep_ret=143.12  win=0.20  wr5=72% | pg=0.0516 v=0.7857 kl=0.0849 | 87 sps | ETA 2h 53m
+step=   104,448 (10.4%) | ep_ret=138.50  win=0.83  wr5=72% | pg=0.0594 v=0.5998 kl=0.0642 | 88 sps | ETA 2h 50m
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-izanagi_step=104448.pt
+[eval] step=104,448 | playing 50 games vs izanagi...
+/home/rhatos/.conda/envs/feudalenv/lib/python3.9/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+[eval] step=104,448 | winrate=66.0% (target 90%)
+step=   110,592 (11.1%) | ep_ret=156.23  win=0.50  wr5=70% | pg=0.0422 v=0.7959 kl=0.0773 | 54 sps | ETA 4h 32m
+step=   116,736 (11.7%) | ep_ret=162.40  win=0.67  wr5=70% | pg=0.0317 v=0.6058 kl=0.0654 | 55 sps | ETA 4h 26m
+step=   122,880 (12.3%) | ep_ret=109.40  win=0.86  wr5=69% | pg=0.0521 v=0.7221 kl=0.0671 | 56 sps | ETA 4h 21m
+step=   129,024 (12.9%) | ep_ret=154.84  win=-0.20  wr5=68% | pg=0.0415 v=0.7914 kl=0.0838 | 57 sps | ETA 4h 14m
+step=   135,168 (13.5%) | ep_ret=140.26  win=0.43  wr5=68% | pg=0.0293 v=0.6140 kl=0.0561 | 59 sps | ETA 4h 06m
+step=   141,312 (14.1%) | ep_ret=170.62  win=0.44  wr5=68% | pg=0.0355 v=0.9730 kl=0.0682 | 59 sps | ETA 4h 00m
+step=   147,456 (14.7%) | ep_ret=125.20  win=0.83  wr5=68% | pg=0.0439 v=0.5152 kl=0.0572 | 60 sps | ETA 3h 55m
+step=   153,600 (15.4%) | ep_ret=169.11  win=1.00  wr5=69% | pg=0.0261 v=0.6946 kl=0.0362 | 62 sps | ETA 3h 49m
+step=   159,744 (16.0%) | ep_ret=138.62  win=0.75  wr5=71% | pg=0.0362 v=0.5786 kl=0.0431 | 62 sps | ETA 3h 44m
+step=   165,888 (16.6%) | ep_ret=154.07  win=0.83  wr5=72% | pg=0.0378 v=0.4562 kl=0.0616 | 63 sps | ETA 3h 42m
+step=   172,032 (17.2%) | ep_ret=142.83  win=1.00  wr5=75% | pg=0.0365 v=0.6267 kl=0.0542 | 63 sps | ETA 3h 38m
+step=   178,176 (17.8%) | ep_ret=124.14  win=0.14  wr5=74% | pg=0.0299 v=0.7785 kl=0.0586 | 64 sps | ETA 3h 33m
+step=   184,320 (18.4%) | ep_ret=115.56  win=0.60  wr5=75% | pg=0.0362 v=0.5212 kl=0.0494 | 65 sps | ETA 3h 27m
+step=   190,464 (19.0%) | ep_ret=144.89  win=0.71  wr5=75% | pg=0.0372 v=0.5191 kl=0.0606 | 67 sps | ETA 3h 22m
+step=   196,608 (19.7%) | ep_ret=142.64  win=0.00  wr5=74% | pg=0.0258 v=0.7328 kl=0.0533 | 68 sps | ETA 3h 17m
+step=   202,752 (20.3%) | ep_ret=141.87  win=0.33  wr5=73% | pg=0.0342 v=0.7637 kl=0.0798 | 69 sps | ETA 3h 12m
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-izanagi_step=202752.pt
+[eval] step=202,752 | playing 50 games vs izanagi...
+[eval] step=202,752 | winrate=70.0% (target 90%)
+step=   208,896 (20.9%) | ep_ret=155.20  win=0.62  wr5=72% | pg=0.0337 v=0.4048 kl=0.0505 | 60 sps | ETA 3h 38m
+step=   215,040 (21.5%) | ep_ret=106.47  win=0.33  wr5=72% | pg=0.0260 v=0.5487 kl=0.0615 | 61 sps | ETA 3h 33m
+step=   221,184 (22.1%) | ep_ret=153.40  win=0.60  wr5=71% | pg=0.0456 v=0.4741 kl=0.0551 | 62 sps | ETA 3h 27m
+step=   227,328 (22.7%) | ep_ret=160.40  win=0.60  wr5=72% | pg=0.0404 v=0.3761 kl=0.0683 | 63 sps | ETA 3h 22m
+step=   233,472 (23.3%) | ep_ret=184.40  win=0.67  wr5=72% | pg=0.0366 v=0.6944 kl=0.0740 | 64 sps | ETA 3h 18m
+step=   239,616 (24.0%) | ep_ret=144.70  win=0.50  wr5=72% | pg=0.0350 v=0.6309 kl=0.0494 | 65 sps | ETA 3h 13m
+step=   245,760 (24.6%) | ep_ret=136.03  win=0.75  wr5=71% | pg=0.0335 v=0.3210 kl=0.0602 | 66 sps | ETA 3h 09m
+step=   251,904 (25.2%) | ep_ret=152.09  win=0.86  wr5=73% | pg=0.0278 v=0.4984 kl=0.0352 | 67 sps | ETA 3h 04m
+step=   258,048 (25.8%) | ep_ret=186.04  win=0.40  wr5=72% | pg=0.0665 v=0.6923 kl=0.0369 | 68 sps | ETA 3h 01m
+step=   264,192 (26.4%) | ep_ret=153.51  win=0.86  wr5=72% | pg=0.0274 v=0.5985 kl=0.0541 | 69 sps | ETA 2h 57m
+step=   270,336 (27.0%) | ep_ret=126.57  win=0.50  wr5=72% | pg=0.0274 v=0.6058 kl=0.0420 | 70 sps | ETA 2h 53m
+step=   276,480 (27.6%) | ep_ret=156.49  win=1.00  wr5=76% | pg=0.0327 v=0.7289 kl=0.0477 | 71 sps | ETA 2h 49m
+step=   282,624 (28.3%) | ep_ret=152.93  win=0.75  wr5=76% | pg=0.0354 v=0.6850 kl=0.0524 | 72 sps | ETA 2h 46m
+step=   288,768 (28.9%) | ep_ret=109.16  win=1.00  wr5=77% | pg=0.0197 v=0.5871 kl=0.0259 | 73 sps | ETA 2h 43m
+step=   294,912 (29.5%) | ep_ret=149.32  win=0.20  wr5=75% | pg=0.0272 v=0.5049 kl=0.0502 | 74 sps | ETA 2h 39m
+step=   301,056 (30.1%) | ep_ret=127.36  win=0.80  wr5=74% | pg=0.0328 v=0.5173 kl=0.0586 | 74 sps | ETA 2h 36m
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-izanagi_step=301056.pt
+[eval] step=301,056 | playing 50 games vs izanagi...
+[eval] step=301,056 | winrate=70.0% (target 90%)
+step=   307,200 (30.7%) | ep_ret=92.80  win=0.33  wr5=73% | pg=0.0298 v=0.5208 kl=0.0468 | 69 sps | ETA 2h 48m
+step=   313,344 (31.3%) | ep_ret=167.60  win=0.75  wr5=73% | pg=0.0246 v=0.4830 kl=0.0418 | 69 sps | ETA 2h 45m
+step=   319,488 (31.9%) | ep_ret=184.15  win=0.62  wr5=72% | pg=0.0196 v=0.6814 kl=0.0370 | 70 sps | ETA 2h 41m
+step=   325,632 (32.6%) | ep_ret=168.20  win=0.57  wr5=70% | pg=0.0247 v=0.4338 kl=0.0265 | 71 sps | ETA 2h 38m
+step=   331,776 (33.2%) | ep_ret=187.46  win=0.29  wr5=68% | pg=0.0364 v=0.6264 kl=0.0289 | 71 sps | ETA 2h 35m
+step=   337,920 (33.8%) | ep_ret=157.23  win=0.50  wr5=68% | pg=0.0345 v=0.6693 kl=0.0474 | 72 sps | ETA 2h 32m
+step=   344,064 (34.4%) | ep_ret=140.67  win=1.00  wr5=70% | pg=0.0391 v=0.8207 kl=0.0354 | 73 sps | ETA 2h 29m
+step=   350,208 (35.0%) | ep_ret=134.48  win=1.00  wr5=72% | pg=0.0286 v=0.5957 kl=0.0437 | 74 sps | ETA 2h 27m
+step=   356,352 (35.6%) | ep_ret=97.90  win=1.00  wr5=73% | pg=0.0224 v=0.4680 kl=0.0324 | 74 sps | ETA 2h 24m
+step=   362,496 (36.2%) | ep_ret=150.38  win=0.60  wr5=77% | pg=0.0152 v=0.9588 kl=0.0260 | 75 sps | ETA 2h 21m
+step=   368,640 (36.9%) | ep_ret=213.87  win=0.33  wr5=74% | pg=0.0412 v=0.7716 kl=0.0190 | 76 sps | ETA 2h 19m
+step=   374,784 (37.5%) | ep_ret=137.60  win=0.78  wr5=74% | pg=0.0157 v=0.5473 kl=0.0273 | 76 sps | ETA 2h 16m
+step=   380,928 (38.1%) | ep_ret=154.20  win=0.67  wr5=73% | pg=0.0148 v=0.8264 kl=0.0390 | 77 sps | ETA 2h 14m
+step=   387,072 (38.7%) | ep_ret=161.90  win=1.00  wr5=74% | pg=0.0214 v=0.8607 kl=0.0157 | 78 sps | ETA 2h 11m
+step=   393,216 (39.3%) | ep_ret=118.98  win=0.50  wr5=74% | pg=0.0275 v=0.7219 kl=0.0408 | 78 sps | ETA 2h 09m
+step=   399,360 (39.9%) | ep_ret=160.28  win=0.20  wr5=72% | pg=0.0259 v=0.7421 kl=0.0416 | 79 sps | ETA 2h 06m
+step=   405,504 (40.6%) | ep_ret=175.87  win=0.67  wr5=75% | pg=0.0178 v=0.7605 kl=0.0225 | 79 sps | ETA 2h 04m
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-izanagi_step=405504.pt
+[eval] step=405,504 | playing 50 games vs izanagi...
+[eval] step=405,504 | winrate=68.0% (target 90%)
+step=   411,648 (41.2%) | ep_ret=160.90  win=1.00  wr5=75% | pg=0.0221 v=0.5646 kl=0.0277 | 75 sps | ETA 2h 10m
+step=   417,792 (41.8%) | ep_ret=131.78  win=0.44  wr5=75% | pg=0.0247 v=0.9328 kl=0.0329 | 76 sps | ETA 2h 08m
+step=   423,936 (42.4%) | ep_ret=171.80  win=0.43  wr5=77% | pg=0.0209 v=0.5989 kl=0.0388 | 76 sps | ETA 2h 05m
+step=   430,080 (43.0%) | ep_ret=117.23  win=0.86  wr5=77% | pg=0.0155 v=0.5259 kl=0.0361 | 77 sps | ETA 2h 03m
+step=   436,224 (43.6%) | ep_ret=151.10  win=-0.17  wr5=74% | pg=0.0150 v=0.5378 kl=0.0358 | 78 sps | ETA 2h 01m
+step=   442,368 (44.2%) | ep_ret=140.38  win=0.88  wr5=73% | pg=0.0266 v=0.4856 kl=0.0281 | 78 sps | ETA 1h 59m
+step=   448,512 (44.9%) | ep_ret=153.65  win=0.50  wr5=73% | pg=0.0225 v=0.5704 kl=0.0323 | 79 sps | ETA 1h 56m
+step=   454,656 (45.5%) | ep_ret=127.72  win=-0.20  wr5=71% | pg=0.0227 v=0.7156 kl=0.0261 | 79 sps | ETA 1h 54m
+step=   460,800 (46.1%) | ep_ret=102.24  win=0.60  wr5=71% | pg=0.0567 v=0.3571 kl=0.0345 | 80 sps | ETA 1h 52m
+step=   466,944 (46.7%) | ep_ret=162.03  win=0.38  wr5=69% | pg=0.0314 v=0.5705 kl=0.0452 | 80 sps | ETA 1h 50m
+step=   473,088 (47.3%) | ep_ret=181.76  win=0.80  wr5=70% | pg=0.0266 v=0.8836 kl=0.0289 | 81 sps | ETA 1h 48m
+step=   479,232 (47.9%) | ep_ret=120.17  win=0.67  wr5=71% | pg=0.0167 v=0.6336 kl=0.0150 | 81 sps | ETA 1h 46m
+step=   485,376 (48.5%) | ep_ret=185.40  win=0.60  wr5=71% | pg=0.0274 v=0.8865 kl=0.0348 | 82 sps | ETA 1h 44m
+step=   491,520 (49.2%) | ep_ret=180.71  win=0.57  wr5=68% | pg=0.0149 v=0.7077 kl=0.0185 | 82 sps | ETA 1h 43m
+step=   497,664 (49.8%) | ep_ret=124.94  win=0.14  wr5=67% | pg=0.0139 v=0.6772 kl=0.0304 | 83 sps | ETA 1h 41m
+step=   503,808 (50.4%) | ep_ret=143.43  win=0.38  wr5=67% | pg=0.0285 v=0.6390 kl=0.0396 | 83 sps | ETA 1h 39m
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-izanagi_step=503808.pt
+[eval] step=503,808 | playing 50 games vs izanagi...
+[eval] step=503,808 | winrate=70.0% (target 90%)
+step=   509,952 (51.0%) | ep_ret=160.32  win=1.00  wr5=68% | pg=0.0237 v=0.6978 kl=0.0228 | 79 sps | ETA 1h 43m
+step=   516,096 (51.6%) | ep_ret=138.93  win=0.67  wr5=68% | pg=0.0240 v=0.8979 kl=0.0315 | 79 sps | ETA 1h 41m
+step=   522,240 (52.2%) | ep_ret=139.15  win=0.50  wr5=68% | pg=0.0197 v=0.6624 kl=0.0422 | 80 sps | ETA 1h 39m
+step=   528,384 (52.8%) | ep_ret=165.68  win=0.00  wr5=68% | pg=0.0133 v=0.6771 kl=0.0254 | 80 sps | ETA 1h 37m
+step=   534,528 (53.5%) | ep_ret=155.45  win=0.00  wr5=65% | pg=0.0147 v=1.1175 kl=0.0174 | 81 sps | ETA 1h 36m
+step=   540,672 (54.1%) | ep_ret=147.78  win=0.38  wr5=64% | pg=0.0178 v=0.7103 kl=0.0166 | 81 sps | ETA 1h 34m
+step=   546,816 (54.7%) | ep_ret=145.20  win=0.00  wr5=63% | pg=0.0246 v=0.7288 kl=0.0128 | 82 sps | ETA 1h 32m
+step=   552,960 (55.3%) | ep_ret=122.47  win=0.33  wr5=62% | pg=0.0248 v=0.8221 kl=0.0233 | 82 sps | ETA 1h 30m
+step=   559,104 (55.9%) | ep_ret=161.04  win=0.80  wr5=62% | pg=0.0170 v=0.7261 kl=0.0240 | 82 sps | ETA 1h 29m
+step=   565,248 (56.5%) | ep_ret=157.00  win=0.00  wr5=62% | pg=0.0193 v=0.7167 kl=0.0219 | 83 sps | ETA 1h 27m
+step=   571,392 (57.1%) | ep_ret=173.60  win=-0.25  wr5=60% | pg=0.0126 v=0.6145 kl=0.0135 | 83 sps | ETA 1h 25m
+step=   577,536 (57.8%) | ep_ret=178.04  win=0.40  wr5=61% | pg=0.0132 v=0.9613 kl=0.0353 | 84 sps | ETA 1h 24m
+step=   583,680 (58.4%) | ep_ret=118.38  win=0.50  wr5=63% | pg=0.0159 v=0.7574 kl=0.0242 | 84 sps | ETA 1h 22m
+step=   589,824 (59.0%) | ep_ret=129.96  win=1.00  wr5=63% | pg=0.0188 v=0.5534 kl=0.0224 | 85 sps | ETA 1h 20m
+step=   595,968 (59.6%) | ep_ret=146.86  win=0.10  wr5=62% | pg=0.0210 v=0.5981 kl=0.0242 | 85 sps | ETA 1h 19m
+step=   602,112 (60.2%) | ep_ret=171.00  win=1.00  wr5=62% | pg=0.0216 v=0.4003 kl=0.0381 | 85 sps | ETA 1h 17m
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-izanagi_step=602112.pt
+[eval] step=602,112 | playing 50 games vs izanagi...
+[eval] step=602,112 | winrate=56.0% (target 90%)
+step=   608,256 (60.8%) | ep_ret=143.70  win=0.60  wr5=60% | pg=0.0218 v=0.7582 kl=0.0319 | 82 sps | ETA 1h 19m
+step=   614,400 (61.4%) | ep_ret=160.25  win=1.00  wr5=63% | pg=0.0232 v=0.4773 kl=0.0223 | 82 sps | ETA 1h 18m
+step=   620,544 (62.1%) | ep_ret=119.65  win=0.75  wr5=65% | pg=0.0175 v=0.5529 kl=0.0319 | 82 sps | ETA 1h 16m
+step=   626,688 (62.7%) | ep_ret=153.89  win=-0.14  wr5=65% | pg=0.0216 v=1.0844 kl=0.0307 | 83 sps | ETA 1h 15m
+step=   632,832 (63.3%) | ep_ret=171.26  win=-0.29  wr5=61% | pg=0.0117 v=0.7073 kl=0.0213 | 83 sps | ETA 1h 13m
+step=   638,976 (63.9%) | ep_ret=146.12  win=0.75  wr5=62% | pg=0.0219 v=1.0784 kl=0.0290 | 84 sps | ETA 1h 11m
+step=   645,120 (64.5%) | ep_ret=123.28  win=0.20  wr5=62% | pg=0.0180 v=0.6824 kl=0.0168 | 84 sps | ETA 1h 10m
+step=   651,264 (65.1%) | ep_ret=154.40  win=1.00  wr5=63% | pg=0.0123 v=0.4961 kl=0.0211 | 84 sps | ETA 1h 08m
+step=   657,408 (65.7%) | ep_ret=151.07  win=0.67  wr5=63% | pg=0.0280 v=0.6225 kl=0.0194 | 85 sps | ETA 1h 07m
+step=   663,552 (66.4%) | ep_ret=116.73  win=0.33  wr5=64% | pg=0.0205 v=0.6010 kl=0.0155 | 85 sps | ETA 1h 05m
+step=   669,696 (67.0%) | ep_ret=161.07  win=1.00  wr5=67% | pg=0.0252 v=0.7523 kl=0.0333 | 86 sps | ETA 1h 04m
+step=   675,840 (67.6%) | ep_ret=164.40  win=1.00  wr5=67% | pg=0.0157 v=0.6006 kl=0.0287 | 86 sps | ETA 1h 02m
+step=   681,984 (68.2%) | ep_ret=171.29  win=0.56  wr5=68% | pg=0.0165 v=0.9908 kl=0.0180 | 86 sps | ETA 1h 01m
+step=   688,128 (68.8%) | ep_ret=160.52  win=0.60  wr5=69% | pg=0.0206 v=0.7457 kl=0.0318 | 87 sps | ETA 59m 58s
+step=   694,272 (69.4%) | ep_ret=151.63  win=-0.14  wr5=68% | pg=0.0137 v=0.6899 kl=0.0184 | 87 sps | ETA 58m 32s
+step=   700,416 (70.0%) | ep_ret=115.60  win=1.00  wr5=69% | pg=0.0220 v=0.5898 kl=0.0124 | 87 sps | ETA 57m 08s
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-izanagi_step=700416.pt
+[eval] step=700,416 | playing 50 games vs izanagi...
+[eval] step=700,416 | winrate=72.0% (target 90%)
+step=   706,560 (70.7%) | ep_ret=178.73  win=1.00  wr5=70% | pg=0.0238 v=0.5841 kl=0.0206 | 73 sps | ETA 1h 06m
+step=   712,704 (71.3%) | ep_ret=168.78  win=0.67  wr5=71% | pg=0.0168 v=1.0551 kl=0.0179 | 72 sps | ETA 1h 06m
+step=   718,848 (71.9%) | ep_ret=169.10  win=0.25  wr5=70% | pg=0.0183 v=0.7137 kl=0.0278 | 71 sps | ETA 1h 06m
+step=   724,992 (72.5%) | ep_ret=124.37  win=0.17  wr5=69% | pg=0.0189 v=0.7337 kl=0.0287 | 70 sps | ETA 1h 05m
+step=   731,136 (73.1%) | ep_ret=174.57  win=0.43  wr5=68% | pg=0.0120 v=0.8259 kl=0.0231 | 70 sps | ETA 1h 03m
+step=   737,280 (73.7%) | ep_ret=157.25  win=0.25  wr5=68% | pg=0.0170 v=0.6114 kl=0.0271 | 70 sps | ETA 1h 02m
+step=   743,424 (74.3%) | ep_ret=123.77  win=0.67  wr5=71% | pg=0.0143 v=0.5680 kl=0.0211 | 71 sps | ETA 1h 00m
+step=   749,568 (75.0%) | ep_ret=162.07  win=0.83  wr5=73% | pg=0.0252 v=0.6684 kl=0.0279 | 71 sps | ETA 58m 44s
+step=   755,712 (75.6%) | ep_ret=182.03  win=-0.14  wr5=72% | pg=0.0194 v=0.8659 kl=0.0156 | 71 sps | ETA 57m 02s
+step=   761,856 (76.2%) | ep_ret=141.20  win=0.62  wr5=74% | pg=0.0269 v=0.6708 kl=0.0222 | 72 sps | ETA 55m 20s
+step=   768,000 (76.8%) | ep_ret=174.60  win=0.00  wr5=73% | pg=0.0217 v=0.6680 kl=0.0156 | 72 sps | ETA 53m 41s
+step=   774,144 (77.4%) | ep_ret=116.05  win=0.00  wr5=71% | pg=0.0193 v=0.7153 kl=0.0179 | 72 sps | ETA 52m 02s
+step=   780,288 (78.0%) | ep_ret=147.17  win=0.43  wr5=70% | pg=0.0144 v=0.9178 kl=0.0298 | 73 sps | ETA 50m 24s
+step=   786,432 (78.6%) | ep_ret=167.92  win=-0.20  wr5=68% | pg=0.0321 v=0.6507 kl=0.0221 | 73 sps | ETA 48m 47s
+step=   792,576 (79.3%) | ep_ret=139.70  win=0.33  wr5=67% | pg=0.0165 v=0.6203 kl=0.0233 | 73 sps | ETA 47m 12s
+step=   798,720 (79.9%) | ep_ret=172.96  win=0.20  wr5=67% | pg=0.0152 v=0.5021 kl=0.0190 | 74 sps | ETA 45m 37s
+step=   804,864 (80.5%) | ep_ret=162.35  win=0.75  wr5=65% | pg=0.0256 v=0.8091 kl=0.0172 | 74 sps | ETA 44m 03s
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-izanagi_step=804864.pt
+[eval] step=804,864 | playing 50 games vs izanagi...
+[eval] step=804,864 | winrate=72.0% (target 90%)
+step=   811,008 (81.1%) | ep_ret=169.17  win=0.29  wr5=64% | pg=0.0224 v=0.5766 kl=0.0257 | 72 sps | ETA 43m 57s
+step=   817,152 (81.7%) | ep_ret=151.40  win=0.50  wr5=63% | pg=0.0209 v=0.5900 kl=0.0236 | 72 sps | ETA 42m 21s
+step=   823,296 (82.3%) | ep_ret=160.83  win=0.00  wr5=63% | pg=0.0162 v=1.2663 kl=0.0383 | 72 sps | ETA 40m 46s
+step=   829,440 (82.9%) | ep_ret=163.70  win=1.00  wr5=64% | pg=0.0274 v=0.5652 kl=0.0267 | 73 sps | ETA 39m 11s
+step=   835,584 (83.6%) | ep_ret=162.64  win=0.33  wr5=64% | pg=0.0297 v=1.0509 kl=0.0162 | 73 sps | ETA 37m 37s
+step=   841,728 (84.2%) | ep_ret=184.17  win=0.57  wr5=63% | pg=0.0194 v=0.7361 kl=0.0248 | 73 sps | ETA 36m 04s
+step=   847,872 (84.8%) | ep_ret=136.37  win=0.67  wr5=64% | pg=0.0204 v=0.5451 kl=0.0174 | 73 sps | ETA 34m 31s
+step=   854,016 (85.4%) | ep_ret=184.00  win=0.71  wr5=67% | pg=0.0189 v=1.1232 kl=0.0181 | 74 sps | ETA 32m 59s
+step=   860,160 (86.0%) | ep_ret=145.83  win=0.83  wr5=68% | pg=0.0118 v=0.6359 kl=0.0265 | 74 sps | ETA 31m 29s
+step=   866,304 (86.6%) | ep_ret=121.20  win=0.00  wr5=67% | pg=0.0158 v=0.7401 kl=0.0309 | 74 sps | ETA 29m 59s
+step=   872,448 (87.2%) | ep_ret=163.87  win=0.33  wr5=65% | pg=0.0288 v=0.8751 kl=0.0190 | 75 sps | ETA 28m 29s
+step=   878,592 (87.9%) | ep_ret=142.71  win=0.43  wr5=66% | pg=0.0205 v=0.8023 kl=0.0221 | 75 sps | ETA 27m 01s
+step=   884,736 (88.5%) | ep_ret=178.40  win=0.25  wr5=66% | pg=0.0182 v=0.4878 kl=0.0264 | 75 sps | ETA 25m 33s
+step=   890,880 (89.1%) | ep_ret=167.76  win=0.60  wr5=67% | pg=0.0193 v=0.6011 kl=0.0276 | 75 sps | ETA 24m 06s
+step=   897,024 (89.7%) | ep_ret=190.20  win=0.50  wr5=65% | pg=0.0178 v=0.5498 kl=0.0233 | 76 sps | ETA 22m 40s
+step=   903,168 (90.3%) | ep_ret=130.48  win=0.38  wr5=64% | pg=0.0201 v=0.8256 kl=0.0220 | 76 sps | ETA 21m 14s
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-izanagi_step=903168.pt
+[eval] step=903,168 | playing 50 games vs izanagi...
+[eval] step=903,168 | winrate=66.0% (target 90%)
+step=   909,312 (90.9%) | ep_ret=143.30  win=-0.25  wr5=63% | pg=0.0237 v=0.7673 kl=0.0238 | 74 sps | ETA 20m 23s
+step=   915,456 (91.5%) | ep_ret=158.04  win=0.60  wr5=64% | pg=0.0152 v=0.8877 kl=0.0131 | 74 sps | ETA 18m 56s
+step=   921,600 (92.2%) | ep_ret=162.77  win=0.83  wr5=67% | pg=0.0257 v=0.7888 kl=0.0344 | 75 sps | ETA 17m 29s
+step=   927,744 (92.8%) | ep_ret=158.80  win=0.00  wr5=66% | pg=0.0135 v=0.6632 kl=0.0168 | 75 sps | ETA 16m 04s
+step=   933,888 (93.4%) | ep_ret=129.35  win=1.00  wr5=68% | pg=0.0198 v=0.8013 kl=0.0224 | 75 sps | ETA 14m 38s
+step=   940,032 (94.0%) | ep_ret=187.90  win=0.33  wr5=67% | pg=0.0193 v=0.7613 kl=0.0258 | 75 sps | ETA 13m 14s
+step=   946,176 (94.6%) | ep_ret=141.43  win=0.62  wr5=68% | pg=0.0265 v=0.7084 kl=0.0231 | 76 sps | ETA 11m 50s
+step=   952,320 (95.2%) | ep_ret=159.85  win=0.00  wr5=65% | pg=0.0152 v=0.7737 kl=0.0153 | 76 sps | ETA 10m 27s
+step=   958,464 (95.8%) | ep_ret=130.55  win=0.00  wr5=63% | pg=0.0249 v=0.5390 kl=0.0167 | 76 sps | ETA 9m 04s
+step=   964,608 (96.5%) | ep_ret=195.16  win=0.60  wr5=63% | pg=0.0193 v=0.9663 kl=0.0203 | 77 sps | ETA 7m 42s
+step=   970,752 (97.1%) | ep_ret=131.20  win=1.00  wr5=64% | pg=0.0244 v=0.7386 kl=0.0226 | 77 sps | ETA 6m 20s
+step=   976,896 (97.7%) | ep_ret=169.38  win=0.44  wr5=63% | pg=0.0261 v=1.0130 kl=0.0273 | 77 sps | ETA 4m 59s
+step=   983,040 (98.3%) | ep_ret=183.97  win=0.33  wr5=62% | pg=0.0193 v=0.4524 kl=0.0234 | 77 sps | ETA 3m 39s
+step=   989,184 (98.9%) | ep_ret=110.40  win=1.00  wr5=62% | pg=0.0226 v=0.5861 kl=0.0161 | 78 sps | ETA 2m 19s
+step=   995,328 (99.5%) | ep_ret=170.05  win=0.00  wr5=61% | pg=0.0273 v=0.7705 kl=0.0301 | 78 sps | ETA 1m 00s
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.

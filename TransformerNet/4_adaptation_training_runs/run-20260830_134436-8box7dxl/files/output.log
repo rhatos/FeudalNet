@@ -1,0 +1,38 @@
+New wandb run: agent-mixedBot (8box7dxl)
+Run id 8box7dxl written to run_id_finetune.txt
+wandb: WARNING The get_url method is deprecated and will be removed in a future release. Please use `run.url` instead.
+Run config (74 parameters) → models/configs/agent-mixedBot_8box7dxl_config.csv
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Envs: 24 x mixedBot on maps/16x16/basesWorkers16x16.xml
+/home/rhatos/.conda/envs/feudalenv/lib/python3.9/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+Model: embedded | parameters: 661,854
+  optimizer: none to restore (KeyError) — starting fresh
+Loaded example_models/16x16/agent.pt
+Fine-tuning vs mixedBot for 1,000,000 steps, counting from 0
+Fine-tuning | 24 envs vs mixedBot | 1,000,000 steps | map 16x16 | batch 6144 / minibatch 1536 | wandb: agent-mixedBot
+step=     6,144 ( 0.6%) | ep_ret=n/a  win=n/a  wr5=n/a | pg=0.0196 v=0.1657 kl=0.1045 | 439 sps | ETA 37m 45s
+step=    12,288 ( 1.2%) | ep_ret=89.17  win=1.00  wr5=100% (7/24 envs) | pg=0.0631 v=0.9572 kl=0.2820 | 341 sps | ETA 48m 19s
+step=    18,432 ( 1.8%) | ep_ret=117.49  win=1.00  wr5=100% (18/24 envs) | pg=0.0851 v=0.5517 kl=0.2406 | 229 sps | ETA 1h 11m
+step=    24,576 ( 2.5%) | ep_ret=129.09  win=1.00  wr5=100% (23/24 envs) | pg=0.0620 v=0.6298 kl=0.1537 | 172 sps | ETA 1h 34m
+step=    30,720 ( 3.1%) | ep_ret=115.28  win=0.75  wr5=96% | pg=0.0293 v=0.5189 kl=0.0972 | 143 sps | ETA 1h 53m
+step=    36,864 ( 3.7%) | ep_ret=115.04  win=1.00  wr5=96% | pg=0.0539 v=0.6256 kl=0.0932 | 127 sps | ETA 2h 06m
+step=    43,008 ( 4.3%) | ep_ret=120.64  win=0.82  wr5=94% | pg=0.0343 v=0.6714 kl=0.0801 | 115 sps | ETA 2h 19m
+step=    49,152 ( 4.9%) | ep_ret=123.27  win=1.00  wr5=96% | pg=0.0415 v=0.4605 kl=0.0853 | 110 sps | ETA 2h 24m
+step=    55,296 ( 5.5%) | ep_ret=110.43  win=1.00  wr5=96% | pg=0.0295 v=0.5438 kl=0.0427 | 108 sps | ETA 2h 25m
+step=    61,440 ( 6.1%) | ep_ret=113.62  win=0.80  wr5=96% | pg=0.0228 v=0.5197 kl=0.0587 | 105 sps | ETA 2h 28m
+step=    67,584 ( 6.8%) | ep_ret=97.00  win=1.00  wr5=96% | pg=0.0207 v=0.4108 kl=0.0551 | 97 sps | ETA 2h 39m
+step=    73,728 ( 7.4%) | ep_ret=112.07  win=1.00  wr5=96% | pg=0.0387 v=0.5130 kl=0.0843 | 91 sps | ETA 2h 49m
+step=    79,872 ( 8.0%) | ep_ret=125.12  win=0.83  wr5=96% | pg=0.0319 v=0.8195 kl=0.0632 | 92 sps | ETA 2h 46m
+step=    86,016 ( 8.6%) | ep_ret=102.56  win=1.00  wr5=96% | pg=0.0234 v=0.4179 kl=0.0559 | 93 sps | ETA 2h 43m
+step=    92,160 ( 9.2%) | ep_ret=129.96  win=0.82  wr5=95% | pg=0.0334 v=0.5592 kl=0.0664 | 94 sps | ETA 2h 40m
+step=    98,304 ( 9.8%) | ep_ret=159.12  win=1.00  wr5=96% | pg=0.0485 v=0.6774 kl=0.0880 | 95 sps | ETA 2h 38m
+step=   104,448 (10.4%) | ep_ret=109.89  win=0.82  wr5=95% | pg=0.0262 v=0.5955 kl=0.0475 | 96 sps | ETA 2h 35m
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/agent-mixedBot_step=104448.pt
+[eval] step=104,448 | playing 50 games vs mixedBot...
+/home/rhatos/.conda/envs/feudalenv/lib/python3.9/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+[eval] step=104,448 | winrate=96.0% (target 90%)
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Early stopping: winrate 96.0% >= 90%

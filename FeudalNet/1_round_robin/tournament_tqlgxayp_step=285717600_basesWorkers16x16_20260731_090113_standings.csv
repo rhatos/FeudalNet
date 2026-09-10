@@ -1,0 +1,16 @@
+participant,played,wins,draws,losses,points,points_pct,win_pct,map,seed
+FeudalNet,140,125,3,12,126.5,90.36,89.29,maps/16x16/basesWorkers16x16.xml,42
+coacAI,140,113,5,22,115.5,82.5,80.71,maps/16x16/basesWorkers16x16.xml,42
+izanagi,140,99,7,34,102.5,73.21,70.71,maps/16x16/basesWorkers16x16.xml,42
+mayari,140,99,6,35,102.0,72.86,70.71,maps/16x16/basesWorkers16x16.xml,42
+droplet,140,80,30,30,95.0,67.86,57.14,maps/16x16/basesWorkers16x16.xml,42
+workerRushAI,140,79,30,31,94.0,67.14,56.43,maps/16x16/basesWorkers16x16.xml,42
+mixedBot,140,87,4,49,89.0,63.57,62.14,maps/16x16/basesWorkers16x16.xml,42
+tiamat,140,69,6,65,72.0,51.43,49.29,maps/16x16/basesWorkers16x16.xml,42
+lightRushAI,140,62,5,73,64.5,46.07,44.29,maps/16x16/basesWorkers16x16.xml,42
+guidedRojoA3N,140,44,21,75,54.5,38.93,31.43,maps/16x16/basesWorkers16x16.xml,42
+naiveMCTSAI,140,32,43,65,53.5,38.21,22.86,maps/16x16/basesWorkers16x16.xml,42
+rojo,140,32,36,72,50.0,35.71,22.86,maps/16x16/basesWorkers16x16.xml,42
+randomBiasedAI,140,5,16,119,13.0,9.29,3.57,maps/16x16/basesWorkers16x16.xml,42
+randomAI,140,0,19,121,9.5,6.79,0.0,maps/16x16/basesWorkers16x16.xml,42
+passiveAI,140,0,17,123,8.5,6.07,0.0,maps/16x16/basesWorkers16x16.xml,42

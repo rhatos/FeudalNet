@@ -1,0 +1,279 @@
+New wandb run: tqlgxayp_GOOD-naiveMCTSAI (91k0pnqa)
+Run id 91k0pnqa written to run_id_finetune.txt
+[34m[1mwandb[0m: [33mWARNING[0m The get_url method is deprecated and will be removed in a future release. Please use `run.url` instead.
+Run config (76 parameters) → models/configs/tqlgxayp_GOOD-naiveMCTSAI_91k0pnqa_config.csv
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Opponents: {0: 'naiveMCTSAI', 1: 'naiveMCTSAI', 2: 'naiveMCTSAI', 3: 'naiveMCTSAI', 4: 'naiveMCTSAI', 5: 'naiveMCTSAI', 6: 'naiveMCTSAI', 7: 'naiveMCTSAI', 8: 'naiveMCTSAI', 9: 'naiveMCTSAI', 10: 'naiveMCTSAI', 11: 'naiveMCTSAI', 12: 'naiveMCTSAI', 13: 'naiveMCTSAI', 14: 'naiveMCTSAI', 15: 'naiveMCTSAI', 16: 'naiveMCTSAI', 17: 'naiveMCTSAI', 18: 'naiveMCTSAI', 19: 'naiveMCTSAI', 20: 'naiveMCTSAI', 21: 'naiveMCTSAI', 22: 'naiveMCTSAI', 23: 'naiveMCTSAI', 24: 'naiveMCTSAI', 25: 'naiveMCTSAI', 26: 'naiveMCTSAI', 27: 'naiveMCTSAI', 28: 'naiveMCTSAI', 29: 'naiveMCTSAI', 30: 'naiveMCTSAI', 31: 'naiveMCTSAI'}
+Action space: [6, 4, 4, 4, 4, 7, 49]  (sum=78)
+Model parameters: 4,394,320
+cosine: False
+  optimizer: Adam moments restored from the checkpoint
+Loaded models/tqlgxayp_GOOD.pt (trained to step 285,717,600)
+Fine-tuning vs naiveMCTSAI for 1,000,000 steps, counting from 0
+Fine-tuning | 32 envs vs naiveMCTSAI | 1,000,000 steps | map 16x16 | wandb: tqlgxayp_GOOD-naiveMCTSAI
+step=     1,600 ( 0.2%) | ep_ret=n/a  win=n/a | loss=0.1746 | r_int=0.0031 | 520 sps | ETA 31m 58s
+step=     3,200 ( 0.3%) | ep_ret=n/a  win=n/a | loss=0.1679 | r_int=-0.0354 | 531 sps | ETA 31m 15s
+step=     4,800 ( 0.5%) | ep_ret=n/a  win=n/a | loss=0.1709 | r_int=-0.0282 | 552 sps | ETA 30m 02s
+step=     6,400 ( 0.6%) | ep_ret=n/a  win=n/a | loss=0.1919 | r_int=0.0019 | 546 sps | ETA 30m 18s
+step=     8,000 ( 0.8%) | ep_ret=n/a  win=n/a | loss=0.2521 | r_int=0.0290 | 557 sps | ETA 29m 41s
+step=     9,600 ( 1.0%) | ep_ret=n/a  win=n/a | loss=0.2807 | r_int=0.0272 | 556 sps | ETA 29m 42s
+step=    11,200 ( 1.1%) | ep_ret=n/a  win=n/a | loss=0.3927 | r_int=-0.0756 | 561 sps | ETA 29m 22s
+step=    12,800 ( 1.3%) | ep_ret=n/a  win=n/a | loss=1.0422 | r_int=-0.1249 | 546 sps | ETA 30m 07s
+step=    14,400 ( 1.4%) | ep_ret=n/a  win=n/a | loss=0.6755 | r_int=-0.0698 | 535 sps | ETA 30m 41s
+step=    16,000 ( 1.6%) | ep_ret=n/a  win=n/a | loss=1.1439 | r_int=-0.0528 | 525 sps | ETA 31m 13s
+step=    17,600 ( 1.8%) | ep_ret=n/a  win=n/a | loss=0.6056 | r_int=-0.0511 | 522 sps | ETA 31m 23s
+step=    19,200 ( 1.9%) | ep_ret=n/a  win=n/a | loss=1.3499 | r_int=-0.0119 | 518 sps | ETA 31m 33s
+step=    20,800 ( 2.1%) | ep_ret=n/a  win=n/a | loss=1.4722 | r_int=-0.0254 | 516 sps | ETA 31m 38s
+step=    22,400 ( 2.2%) | ep_ret=n/a  win=n/a | loss=2.6149 | r_int=-0.0068 | 510 sps | ETA 31m 56s
+step=    24,000 ( 2.4%) | ep_ret=n/a  win=n/a | loss=1.0273 | r_int=-0.0192 | 502 sps | ETA 32m 22s
+step=    25,600 ( 2.6%) | ep_ret=n/a  win=n/a | loss=2.0306 | r_int=0.0279 | 493 sps | ETA 32m 56s
+step=    27,200 ( 2.7%) | ep_ret=n/a  win=n/a | loss=0.6898 | r_int=0.0039 | 484 sps | ETA 33m 29s
+step=    28,800 ( 2.9%) | ep_ret=n/a  win=n/a | loss=0.9390 | r_int=-0.0022 | 474 sps | ETA 34m 08s
+step=    30,400 ( 3.0%) | ep_ret=n/a  win=n/a | loss=0.5955 | r_int=0.0008 | 465 sps | ETA 34m 46s
+step=    32,000 ( 3.2%) | ep_ret=n/a  win=n/a | loss=0.5642 | r_int=-0.0039 | 454 sps | ETA 35m 33s
+step=    33,600 ( 3.4%) | ep_ret=n/a  win=n/a | loss=0.5449 | r_int=-0.0291 | 446 sps | ETA 36m 06s
+step=    35,200 ( 3.5%) | ep_ret=n/a  win=n/a | loss=0.6852 | r_int=-0.0119 | 437 sps | ETA 36m 45s
+step=    36,800 ( 3.7%) | ep_ret=n/a  win=n/a | loss=0.9943 | r_int=-0.0322 | 429 sps | ETA 37m 22s
+step=    38,400 ( 3.8%) | ep_ret=n/a  win=n/a | loss=1.1600 | r_int=-0.0469 | 421 sps | ETA 38m 02s
+step=    40,000 ( 4.0%) | ep_ret=n/a  win=n/a | loss=0.9964 | r_int=-0.0423 | 414 sps | ETA 38m 40s
+step=    41,600 ( 4.2%) | ep_ret=n/a  win=n/a | loss=1.1753 | r_int=-0.0505 | 405 sps | ETA 39m 24s
+step=    43,200 ( 4.3%) | ep_ret=n/a  win=n/a | loss=1.0312 | r_int=-0.0471 | 398 sps | ETA 40m 01s
+step=    44,800 ( 4.5%) | ep_ret=n/a  win=n/a | loss=1.1536 | r_int=-0.0114 | 390 sps | ETA 40m 48s
+step=    46,400 ( 4.6%) | ep_ret=n/a  win=n/a | loss=1.3899 | r_int=-0.0006 | 383 sps | ETA 41m 28s
+step=    48,000 ( 4.8%) | ep_ret=n/a  win=n/a | loss=1.4595 | r_int=-0.0273 | 377 sps | ETA 42m 08s
+step=    49,600 ( 5.0%) | ep_ret=n/a  win=n/a | loss=1.7243 | r_int=-0.0146 | 370 sps | ETA 42m 50s
+step=    51,200 ( 5.1%) | ep_ret=n/a  win=n/a | loss=1.3928 | r_int=-0.0069 | 364 sps | ETA 43m 24s
+step=    52,800 ( 5.3%) | ep_ret=n/a  win=n/a | loss=1.6543 | r_int=-0.0310 | 359 sps | ETA 43m 59s
+step=    54,400 ( 5.4%) | ep_ret=n/a  win=n/a | loss=2.4570 | r_int=-0.0162 | 352 sps | ETA 44m 43s
+step=    56,000 ( 5.6%) | ep_ret=n/a  win=n/a | loss=0.7251 | r_int=-0.0055 | 347 sps | ETA 45m 19s
+step=    57,600 ( 5.8%) | ep_ret=n/a  win=n/a | loss=0.7636 | r_int=-0.0255 | 342 sps | ETA 45m 58s
+step=    59,200 ( 5.9%) | ep_ret=n/a  win=n/a | loss=1.2585 | r_int=-0.0244 | 337 sps | ETA 46m 34s
+step=    60,800 ( 6.1%) | ep_ret=n/a  win=n/a | loss=0.8667 | r_int=-0.0195 | 332 sps | ETA 47m 05s
+step=    62,400 ( 6.2%) | ep_ret=n/a  win=n/a | loss=3.2273 | r_int=-0.0091 | 328 sps | ETA 47m 34s
+step=    64,000 ( 6.4%) | ep_ret=n/a  win=n/a | loss=0.9170 | r_int=-0.0362 | 325 sps | ETA 48m 03s
+step=    65,600 ( 6.6%) | ep_ret=n/a  win=n/a | loss=0.7852 | r_int=-0.0260 | 321 sps | ETA 48m 29s
+step=    67,200 ( 6.7%) | ep_ret=n/a  win=n/a | loss=1.4324 | r_int=0.0042 | 318 sps | ETA 48m 55s
+step=    68,800 ( 6.9%) | ep_ret=n/a  win=n/a | loss=1.9883 | r_int=-0.0347 | 315 sps | ETA 49m 20s
+step=    70,400 ( 7.0%) | ep_ret=n/a  win=n/a | loss=1.2754 | r_int=-0.0135 | 311 sps | ETA 49m 47s
+step=    72,000 ( 7.2%) | ep_ret=n/a  win=n/a | loss=2.1694 | r_int=-0.0268 | 309 sps | ETA 50m 07s
+step=    73,600 ( 7.4%) | ep_ret=n/a  win=n/a | loss=1.4546 | r_int=-0.0336 | 306 sps | ETA 50m 26s
+step=    75,200 ( 7.5%) | ep_ret=n/a  win=n/a | loss=1.2259 | r_int=-0.0442 | 304 sps | ETA 50m 46s
+step=    76,800 ( 7.7%) | ep_ret=n/a  win=n/a | loss=1.1114 | r_int=-0.0331 | 301 sps | ETA 51m 03s
+step=    78,400 ( 7.8%) | ep_ret=n/a  win=n/a | loss=1.0252 | r_int=-0.0330 | 299 sps | ETA 51m 17s
+step=    80,000 ( 8.0%) | ep_ret=n/a  win=n/a | loss=0.9998 | r_int=-0.0526 | 298 sps | ETA 51m 30s
+step=    81,600 ( 8.2%) | ep_ret=n/a  win=n/a | loss=2.1198 | r_int=-0.0347 | 296 sps | ETA 51m 42s
+step=    83,200 ( 8.3%) | ep_ret=n/a  win=n/a | loss=0.7285 | r_int=-0.0400 | 294 sps | ETA 51m 57s
+step=    84,800 ( 8.5%) | ep_ret=n/a  win=n/a | loss=0.8346 | r_int=-0.0385 | 292 sps | ETA 52m 13s
+step=    86,400 ( 8.6%) | ep_ret=n/a  win=n/a | loss=0.9599 | r_int=-0.0549 | 290 sps | ETA 52m 27s
+step=    88,000 ( 8.8%) | ep_ret=n/a  win=n/a | loss=1.7950 | r_int=-0.0049 | 289 sps | ETA 52m 37s
+step=    89,600 ( 9.0%) | ep_ret=n/a  win=n/a | loss=1.9276 | r_int=-0.0437 | 287 sps | ETA 52m 50s
+step=    91,200 ( 9.1%) | ep_ret=n/a  win=n/a | loss=1.3639 | r_int=-0.0067 | 286 sps | ETA 53m 00s
+step=    92,800 ( 9.3%) | ep_ret=n/a  win=n/a | loss=1.1570 | r_int=-0.0260 | 284 sps | ETA 53m 17s
+step=    94,400 ( 9.4%) | ep_ret=n/a  win=n/a | loss=1.0734 | r_int=-0.0153 | 282 sps | ETA 53m 32s
+step=    96,000 ( 9.6%) | ep_ret=n/a  win=n/a | loss=1.2192 | r_int=-0.0092 | 280 sps | ETA 53m 44s
+step=    97,600 ( 9.8%) | ep_ret=n/a  win=n/a | loss=1.5992 | r_int=-0.0093 | 279 sps | ETA 53m 50s
+step=    99,200 ( 9.9%) | ep_ret=n/a  win=n/a | loss=1.0242 | r_int=-0.0317 | 278 sps | ETA 53m 56s
+step=   100,800 (10.1%) | ep_ret=n/a  win=n/a | loss=0.8175 | r_int=-0.0298 | 277 sps | ETA 54m 02s
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/tqlgxayp_GOOD-naiveMCTSAI_step=100800.pt
+[eval] step=100,800 | playing 48 games vs naiveMCTSAI...
+[eval] step=100,800 | winrate=87.5% (target 90%)
+step=   102,400 (10.2%) | ep_ret=n/a  win=n/a | loss=1.6788 | r_int=-0.0415 | 171 sps | ETA 1h 27m
+step=   104,000 (10.4%) | ep_ret=n/a  win=n/a | loss=1.8312 | r_int=-0.0179 | 171 sps | ETA 1h 27m
+step=   105,600 (10.6%) | ep_ret=n/a  win=n/a | loss=1.0382 | r_int=-0.0297 | 172 sps | ETA 1h 26m
+step=   107,200 (10.7%) | ep_ret=n/a  win=n/a | loss=1.2640 | r_int=-0.0126 | 172 sps | ETA 1h 26m
+step=   108,800 (10.9%) | ep_ret=n/a  win=n/a | loss=1.2635 | r_int=-0.0304 | 173 sps | ETA 1h 25m
+step=   110,400 (11.0%) | ep_ret=n/a  win=n/a | loss=2.0021 | r_int=-0.0174 | 174 sps | ETA 1h 25m
+step=   112,000 (11.2%) | ep_ret=n/a  win=n/a | loss=2.6911 | r_int=-0.0225 | 174 sps | ETA 1h 25m
+step=   113,600 (11.4%) | ep_ret=n/a  win=n/a | loss=0.9536 | r_int=-0.0250 | 175 sps | ETA 1h 24m
+step=   115,200 (11.5%) | ep_ret=n/a  win=n/a | loss=2.0348 | r_int=-0.0274 | 175 sps | ETA 1h 24m
+step=   116,800 (11.7%) | ep_ret=n/a  win=n/a | loss=1.8942 | r_int=-0.0280 | 175 sps | ETA 1h 23m
+step=   118,400 (11.8%) | ep_ret=n/a  win=n/a | loss=1.2858 | r_int=-0.0559 | 176 sps | ETA 1h 23m
+step=   120,000 (12.0%) | ep_ret=n/a  win=n/a | loss=1.2433 | r_int=-0.0352 | 176 sps | ETA 1h 23m
+step=   121,600 (12.2%) | ep_ret=n/a  win=n/a | loss=0.8710 | r_int=-0.0099 | 177 sps | ETA 1h 22m
+step=   123,200 (12.3%) | ep_ret=n/a  win=n/a | loss=2.3721 | r_int=-0.0203 | 177 sps | ETA 1h 22m
+step=   124,800 (12.5%) | ep_ret=n/a  win=n/a | loss=0.6421 | r_int=-0.0532 | 177 sps | ETA 1h 22m
+step=   126,400 (12.6%) | ep_ret=n/a  win=n/a | loss=0.8918 | r_int=-0.0442 | 178 sps | ETA 1h 21m
+step=   128,000 (12.8%) | ep_ret=n/a  win=n/a | loss=1.3084 | r_int=-0.0734 | 178 sps | ETA 1h 21m
+step=   129,600 (13.0%) | ep_ret=n/a  win=n/a | loss=1.0546 | r_int=-0.0335 | 179 sps | ETA 1h 21m
+step=   131,200 (13.1%) | ep_ret=n/a  win=n/a | loss=0.6341 | r_int=-0.0358 | 179 sps | ETA 1h 20m
+step=   132,800 (13.3%) | ep_ret=n/a  win=n/a | loss=0.8528 | r_int=-0.0529 | 180 sps | ETA 1h 20m
+step=   134,400 (13.4%) | ep_ret=n/a  win=n/a | loss=1.9202 | r_int=-0.0341 | 180 sps | ETA 1h 20m
+step=   136,000 (13.6%) | ep_ret=n/a  win=n/a | loss=1.3536 | r_int=-0.0370 | 180 sps | ETA 1h 19m
+step=   137,600 (13.8%) | ep_ret=n/a  win=n/a | loss=1.6395 | r_int=-0.0477 | 181 sps | ETA 1h 19m
+step=   139,200 (13.9%) | ep_ret=n/a  win=n/a | loss=1.4292 | r_int=-0.0324 | 181 sps | ETA 1h 19m
+step=   140,800 (14.1%) | ep_ret=n/a  win=n/a | loss=0.8028 | r_int=-0.0517 | 181 sps | ETA 1h 19m
+step=   142,400 (14.2%) | ep_ret=n/a  win=n/a | loss=0.8922 | r_int=-0.0154 | 181 sps | ETA 1h 18m
+step=   144,000 (14.4%) | ep_ret=n/a  win=n/a | loss=1.6809 | r_int=-0.0273 | 182 sps | ETA 1h 18m
+step=   145,600 (14.6%) | ep_ret=n/a  win=n/a | loss=1.2670 | r_int=-0.0349 | 182 sps | ETA 1h 18m
+step=   147,200 (14.7%) | ep_ret=n/a  win=n/a | loss=2.7031 | r_int=-0.0153 | 182 sps | ETA 1h 17m
+step=   148,800 (14.9%) | ep_ret=n/a  win=n/a | loss=1.9619 | r_int=-0.0239 | 183 sps | ETA 1h 17m
+step=   150,400 (15.0%) | ep_ret=n/a  win=n/a | loss=0.6887 | r_int=-0.0277 | 183 sps | ETA 1h 17m
+step=   152,000 (15.2%) | ep_ret=n/a  win=n/a | loss=0.6142 | r_int=-0.0401 | 183 sps | ETA 1h 17m
+step=   153,600 (15.4%) | ep_ret=n/a  win=n/a | loss=1.1745 | r_int=-0.0118 | 183 sps | ETA 1h 16m
+step=   155,200 (15.5%) | ep_ret=n/a  win=n/a | loss=1.0955 | r_int=-0.0286 | 184 sps | ETA 1h 16m
+step=   156,800 (15.7%) | ep_ret=n/a  win=n/a | loss=1.1459 | r_int=-0.0522 | 184 sps | ETA 1h 16m
+step=   158,400 (15.8%) | ep_ret=n/a  win=n/a | loss=1.3742 | r_int=-0.0183 | 184 sps | ETA 1h 16m
+step=   160,000 (16.0%) | ep_ret=n/a  win=n/a | loss=1.2092 | r_int=-0.0185 | 184 sps | ETA 1h 15m
+step=   161,600 (16.2%) | ep_ret=n/a  win=n/a | loss=1.8510 | r_int=-0.0088 | 185 sps | ETA 1h 15m
+step=   163,200 (16.3%) | ep_ret=n/a  win=n/a | loss=1.7218 | r_int=-0.0063 | 185 sps | ETA 1h 15m
+step=   164,800 (16.5%) | ep_ret=n/a  win=n/a | loss=1.0641 | r_int=-0.0243 | 185 sps | ETA 1h 15m
+step=   166,400 (16.6%) | ep_ret=n/a  win=n/a | loss=1.4515 | r_int=-0.0156 | 185 sps | ETA 1h 14m
+step=   168,000 (16.8%) | ep_ret=n/a  win=n/a | loss=1.5082 | r_int=-0.0179 | 186 sps | ETA 1h 14m
+step=   169,600 (17.0%) | ep_ret=n/a  win=n/a | loss=1.0347 | r_int=-0.0105 | 186 sps | ETA 1h 14m
+step=   171,200 (17.1%) | ep_ret=n/a  win=n/a | loss=1.6892 | r_int=-0.0124 | 186 sps | ETA 1h 14m
+step=   172,800 (17.3%) | ep_ret=n/a  win=n/a | loss=1.4218 | r_int=0.0058 | 186 sps | ETA 1h 13m
+step=   174,400 (17.4%) | ep_ret=n/a  win=n/a | loss=0.8231 | r_int=-0.0541 | 187 sps | ETA 1h 13m
+step=   176,000 (17.6%) | ep_ret=n/a  win=n/a | loss=0.6412 | r_int=-0.0107 | 187 sps | ETA 1h 13m
+step=   177,600 (17.8%) | ep_ret=n/a  win=n/a | loss=0.9537 | r_int=-0.0253 | 187 sps | ETA 1h 13m
+step=   179,200 (17.9%) | ep_ret=n/a  win=n/a | loss=2.0711 | r_int=-0.0345 | 187 sps | ETA 1h 13m
+step=   180,800 (18.1%) | ep_ret=n/a  win=n/a | loss=1.2724 | r_int=-0.0374 | 187 sps | ETA 1h 12m
+step=   182,400 (18.2%) | ep_ret=n/a  win=n/a | loss=1.0108 | r_int=-0.0110 | 187 sps | ETA 1h 12m
+step=   184,000 (18.4%) | ep_ret=n/a  win=n/a | loss=1.0612 | r_int=-0.0279 | 188 sps | ETA 1h 12m
+step=   185,600 (18.6%) | ep_ret=n/a  win=n/a | loss=0.9969 | r_int=-0.0026 | 188 sps | ETA 1h 12m
+step=   187,200 (18.7%) | ep_ret=n/a  win=n/a | loss=1.4465 | r_int=-0.0240 | 188 sps | ETA 1h 12m
+step=   188,800 (18.9%) | ep_ret=n/a  win=n/a | loss=1.7120 | r_int=-0.0182 | 188 sps | ETA 1h 11m
+step=   190,400 (19.0%) | ep_ret=n/a  win=n/a | loss=0.9667 | r_int=-0.0096 | 188 sps | ETA 1h 11m
+step=   192,000 (19.2%) | ep_ret=n/a  win=n/a | loss=1.1309 | r_int=-0.0254 | 188 sps | ETA 1h 11m
+step=   193,600 (19.4%) | ep_ret=n/a  win=n/a | loss=1.3586 | r_int=-0.0309 | 189 sps | ETA 1h 11m
+step=   195,200 (19.5%) | ep_ret=n/a  win=n/a | loss=0.8804 | r_int=-0.0112 | 189 sps | ETA 1h 11m
+step=   196,800 (19.7%) | ep_ret=n/a  win=n/a | loss=1.2390 | r_int=-0.0154 | 189 sps | ETA 1h 10m
+step=   198,400 (19.8%) | ep_ret=n/a  win=n/a | loss=1.3837 | r_int=-0.0220 | 189 sps | ETA 1h 10m
+step=   200,000 (20.0%) | ep_ret=n/a  win=n/a | loss=0.9191 | r_int=-0.0450 | 189 sps | ETA 1h 10m
+[eval] step=200,000 | playing 48 games vs naiveMCTSAI...
+[eval] step=200,000 | winrate=83.3% (target 90%)
+step=   201,600 (20.2%) | ep_ret=n/a  win=n/a | loss=0.6656 | r_int=-0.0318 | 155 sps | ETA 1h 25m
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/tqlgxayp_GOOD-naiveMCTSAI_step=201600.pt
+step=   203,200 (20.3%) | ep_ret=n/a  win=n/a | loss=0.9744 | r_int=-0.0292 | 156 sps | ETA 1h 25m
+step=   204,800 (20.5%) | ep_ret=n/a  win=n/a | loss=0.7760 | r_int=-0.0534 | 156 sps | ETA 1h 24m
+step=   206,400 (20.6%) | ep_ret=n/a  win=n/a | loss=2.0536 | r_int=-0.0379 | 156 sps | ETA 1h 24m
+step=   208,000 (20.8%) | ep_ret=n/a  win=n/a | loss=0.9052 | r_int=-0.0658 | 157 sps | ETA 1h 24m
+step=   209,600 (21.0%) | ep_ret=n/a  win=n/a | loss=1.4314 | r_int=-0.0530 | 157 sps | ETA 1h 23m
+step=   211,200 (21.1%) | ep_ret=n/a  win=n/a | loss=1.2955 | r_int=-0.0347 | 157 sps | ETA 1h 23m
+step=   212,800 (21.3%) | ep_ret=n/a  win=n/a | loss=2.3562 | r_int=-0.0268 | 157 sps | ETA 1h 23m
+step=   214,400 (21.4%) | ep_ret=n/a  win=n/a | loss=0.9068 | r_int=-0.0438 | 158 sps | ETA 1h 23m
+step=   216,000 (21.6%) | ep_ret=n/a  win=n/a | loss=1.2591 | r_int=-0.0340 | 158 sps | ETA 1h 22m
+step=   217,600 (21.8%) | ep_ret=n/a  win=n/a | loss=2.5479 | r_int=-0.0175 | 158 sps | ETA 1h 22m
+step=   219,200 (21.9%) | ep_ret=n/a  win=n/a | loss=2.1704 | r_int=-0.0395 | 158 sps | ETA 1h 22m
+step=   220,800 (22.1%) | ep_ret=n/a  win=n/a | loss=1.6247 | r_int=-0.0236 | 159 sps | ETA 1h 21m
+step=   222,400 (22.2%) | ep_ret=n/a  win=n/a | loss=1.4568 | r_int=-0.0394 | 159 sps | ETA 1h 21m
+step=   224,000 (22.4%) | ep_ret=n/a  win=n/a | loss=1.1577 | r_int=-0.0348 | 159 sps | ETA 1h 21m
+step=   225,600 (22.6%) | ep_ret=n/a  win=n/a | loss=1.6622 | r_int=-0.0532 | 159 sps | ETA 1h 21m
+step=   227,200 (22.7%) | ep_ret=n/a  win=n/a | loss=0.7608 | r_int=-0.0163 | 159 sps | ETA 1h 20m
+step=   228,800 (22.9%) | ep_ret=n/a  win=n/a | loss=1.1076 | r_int=-0.0145 | 160 sps | ETA 1h 20m
+step=   230,400 (23.0%) | ep_ret=n/a  win=n/a | loss=1.1359 | r_int=-0.0399 | 160 sps | ETA 1h 20m
+step=   232,000 (23.2%) | ep_ret=n/a  win=n/a | loss=1.2678 | r_int=-0.0414 | 160 sps | ETA 1h 19m
+step=   233,600 (23.4%) | ep_ret=n/a  win=n/a | loss=1.3117 | r_int=-0.0587 | 161 sps | ETA 1h 19m
+step=   235,200 (23.5%) | ep_ret=n/a  win=n/a | loss=1.4272 | r_int=-0.0229 | 161 sps | ETA 1h 19m
+step=   236,800 (23.7%) | ep_ret=n/a  win=n/a | loss=1.1369 | r_int=-0.0242 | 161 sps | ETA 1h 18m
+step=   238,400 (23.8%) | ep_ret=n/a  win=n/a | loss=0.9292 | r_int=-0.0261 | 161 sps | ETA 1h 18m
+step=   240,000 (24.0%) | ep_ret=n/a  win=n/a | loss=0.8398 | r_int=-0.0431 | 162 sps | ETA 1h 18m
+step=   241,600 (24.2%) | ep_ret=n/a  win=n/a | loss=0.9242 | r_int=-0.0194 | 162 sps | ETA 1h 18m
+step=   243,200 (24.3%) | ep_ret=n/a  win=n/a | loss=0.8385 | r_int=-0.0290 | 162 sps | ETA 1h 17m
+step=   244,800 (24.5%) | ep_ret=n/a  win=n/a | loss=1.8240 | r_int=-0.0148 | 163 sps | ETA 1h 17m
+step=   246,400 (24.6%) | ep_ret=n/a  win=n/a | loss=1.0570 | r_int=-0.0590 | 163 sps | ETA 1h 17m
+step=   248,000 (24.8%) | ep_ret=n/a  win=n/a | loss=1.2864 | r_int=-0.0180 | 163 sps | ETA 1h 16m
+step=   249,600 (25.0%) | ep_ret=n/a  win=n/a | loss=1.1444 | r_int=-0.0009 | 163 sps | ETA 1h 16m
+step=   251,200 (25.1%) | ep_ret=n/a  win=n/a | loss=1.1225 | r_int=-0.0472 | 163 sps | ETA 1h 16m
+step=   252,800 (25.3%) | ep_ret=n/a  win=n/a | loss=1.7283 | r_int=-0.0113 | 164 sps | ETA 1h 16m
+step=   254,400 (25.4%) | ep_ret=n/a  win=n/a | loss=0.9616 | r_int=-0.0123 | 164 sps | ETA 1h 15m
+step=   256,000 (25.6%) | ep_ret=n/a  win=n/a | loss=1.1671 | r_int=-0.0156 | 164 sps | ETA 1h 15m
+step=   257,600 (25.8%) | ep_ret=n/a  win=n/a | loss=1.2844 | r_int=-0.0168 | 164 sps | ETA 1h 15m
+step=   259,200 (25.9%) | ep_ret=n/a  win=n/a | loss=0.8711 | r_int=0.0079 | 164 sps | ETA 1h 15m
+step=   260,800 (26.1%) | ep_ret=n/a  win=n/a | loss=1.5007 | r_int=-0.0189 | 165 sps | ETA 1h 14m
+step=   262,400 (26.2%) | ep_ret=n/a  win=n/a | loss=0.8830 | r_int=-0.0442 | 165 sps | ETA 1h 14m
+step=   264,000 (26.4%) | ep_ret=n/a  win=n/a | loss=0.7808 | r_int=-0.0216 | 165 sps | ETA 1h 14m
+step=   265,600 (26.6%) | ep_ret=n/a  win=n/a | loss=1.0329 | r_int=-0.0100 | 165 sps | ETA 1h 14m
+step=   267,200 (26.7%) | ep_ret=n/a  win=n/a | loss=0.9557 | r_int=-0.0407 | 166 sps | ETA 1h 13m
+step=   268,800 (26.9%) | ep_ret=n/a  win=n/a | loss=0.9488 | r_int=-0.0423 | 166 sps | ETA 1h 13m
+step=   270,400 (27.0%) | ep_ret=n/a  win=n/a | loss=0.8998 | r_int=-0.0482 | 166 sps | ETA 1h 13m
+step=   272,000 (27.2%) | ep_ret=n/a  win=n/a | loss=1.8296 | r_int=-0.0406 | 166 sps | ETA 1h 12m
+step=   273,600 (27.4%) | ep_ret=n/a  win=n/a | loss=1.9246 | r_int=-0.0574 | 167 sps | ETA 1h 12m
+step=   275,200 (27.5%) | ep_ret=n/a  win=n/a | loss=0.9356 | r_int=-0.0312 | 167 sps | ETA 1h 12m
+step=   276,800 (27.7%) | ep_ret=n/a  win=n/a | loss=1.0771 | r_int=-0.0351 | 167 sps | ETA 1h 12m
+step=   278,400 (27.8%) | ep_ret=n/a  win=n/a | loss=1.4614 | r_int=-0.0377 | 167 sps | ETA 1h 11m
+step=   280,000 (28.0%) | ep_ret=n/a  win=n/a | loss=1.0226 | r_int=-0.0412 | 168 sps | ETA 1h 11m
+step=   281,600 (28.2%) | ep_ret=n/a  win=n/a | loss=3.7546 | r_int=-0.0230 | 168 sps | ETA 1h 11m
+step=   283,200 (28.3%) | ep_ret=n/a  win=n/a | loss=0.9778 | r_int=-0.0442 | 168 sps | ETA 1h 11m
+step=   284,800 (28.5%) | ep_ret=n/a  win=n/a | loss=1.1182 | r_int=-0.0302 | 168 sps | ETA 1h 10m
+step=   286,400 (28.6%) | ep_ret=n/a  win=n/a | loss=0.9910 | r_int=-0.0322 | 168 sps | ETA 1h 10m
+step=   288,000 (28.8%) | ep_ret=n/a  win=n/a | loss=1.5099 | r_int=-0.0205 | 169 sps | ETA 1h 10m
+step=   289,600 (29.0%) | ep_ret=n/a  win=n/a | loss=1.5143 | r_int=-0.0148 | 169 sps | ETA 1h 10m
+step=   291,200 (29.1%) | ep_ret=n/a  win=n/a | loss=1.1733 | r_int=-0.0368 | 169 sps | ETA 1h 09m
+step=   292,800 (29.3%) | ep_ret=n/a  win=n/a | loss=0.9964 | r_int=-0.0196 | 169 sps | ETA 1h 09m
+step=   294,400 (29.4%) | ep_ret=n/a  win=n/a | loss=2.3200 | r_int=-0.0505 | 169 sps | ETA 1h 09m
+step=   296,000 (29.6%) | ep_ret=n/a  win=n/a | loss=1.0892 | r_int=-0.0453 | 170 sps | ETA 1h 09m
+step=   297,600 (29.8%) | ep_ret=n/a  win=n/a | loss=1.2513 | r_int=-0.0485 | 170 sps | ETA 1h 08m
+step=   299,200 (29.9%) | ep_ret=n/a  win=n/a | loss=1.1546 | r_int=-0.0479 | 170 sps | ETA 1h 08m
+step=   300,800 (30.1%) | ep_ret=n/a  win=n/a | loss=0.9470 | r_int=-0.0340 | 170 sps | ETA 1h 08m
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/tqlgxayp_GOOD-naiveMCTSAI_step=300800.pt
+[eval] step=300,800 | playing 48 games vs naiveMCTSAI...
+[eval] step=300,800 | winrate=77.1% (target 90%)
+step=   302,400 (30.2%) | ep_ret=n/a  win=n/a | loss=0.7015 | r_int=-0.0598 | 157 sps | ETA 1h 13m
+step=   304,000 (30.4%) | ep_ret=n/a  win=n/a | loss=0.7806 | r_int=-0.0156 | 158 sps | ETA 1h 13m
+step=   305,600 (30.6%) | ep_ret=n/a  win=n/a | loss=0.9275 | r_int=-0.0392 | 158 sps | ETA 1h 13m
+step=   307,200 (30.7%) | ep_ret=n/a  win=n/a | loss=0.9677 | r_int=-0.0068 | 158 sps | ETA 1h 13m
+step=   308,800 (30.9%) | ep_ret=n/a  win=n/a | loss=0.8060 | r_int=-0.0471 | 158 sps | ETA 1h 12m
+step=   310,400 (31.0%) | ep_ret=n/a  win=n/a | loss=0.8766 | r_int=-0.0088 | 158 sps | ETA 1h 12m
+step=   312,000 (31.2%) | ep_ret=n/a  win=n/a | loss=1.0264 | r_int=-0.0578 | 158 sps | ETA 1h 12m
+step=   313,600 (31.4%) | ep_ret=n/a  win=n/a | loss=1.0117 | r_int=-0.0631 | 158 sps | ETA 1h 12m
+step=   315,200 (31.5%) | ep_ret=n/a  win=n/a | loss=0.6494 | r_int=-0.0424 | 159 sps | ETA 1h 11m
+step=   316,800 (31.7%) | ep_ret=n/a  win=n/a | loss=1.3178 | r_int=-0.0114 | 159 sps | ETA 1h 11m
+step=   318,400 (31.8%) | ep_ret=n/a  win=n/a | loss=2.0118 | r_int=-0.0494 | 159 sps | ETA 1h 11m
+step=   320,000 (32.0%) | ep_ret=n/a  win=n/a | loss=0.9215 | r_int=-0.0489 | 159 sps | ETA 1h 11m
+step=   321,600 (32.2%) | ep_ret=n/a  win=n/a | loss=1.0655 | r_int=-0.0632 | 159 sps | ETA 1h 11m
+step=   323,200 (32.3%) | ep_ret=n/a  win=n/a | loss=0.6974 | r_int=0.0105 | 159 sps | ETA 1h 10m
+step=   324,800 (32.5%) | ep_ret=n/a  win=n/a | loss=1.2128 | r_int=-0.0347 | 159 sps | ETA 1h 10m
+step=   326,400 (32.6%) | ep_ret=n/a  win=n/a | loss=0.7838 | r_int=-0.0294 | 160 sps | ETA 1h 10m
+step=   328,000 (32.8%) | ep_ret=n/a  win=n/a | loss=1.2949 | r_int=-0.0137 | 160 sps | ETA 1h 10m
+step=   329,600 (33.0%) | ep_ret=n/a  win=n/a | loss=0.6625 | r_int=-0.0390 | 160 sps | ETA 1h 09m
+step=   331,200 (33.1%) | ep_ret=n/a  win=n/a | loss=1.5670 | r_int=-0.0389 | 160 sps | ETA 1h 09m
+step=   332,800 (33.3%) | ep_ret=n/a  win=n/a | loss=0.8904 | r_int=-0.0434 | 160 sps | ETA 1h 09m
+step=   334,400 (33.4%) | ep_ret=n/a  win=n/a | loss=1.4165 | r_int=-0.0081 | 160 sps | ETA 1h 09m
+step=   336,000 (33.6%) | ep_ret=n/a  win=n/a | loss=1.3385 | r_int=-0.0191 | 161 sps | ETA 1h 08m
+step=   337,600 (33.8%) | ep_ret=n/a  win=n/a | loss=1.3862 | r_int=-0.0486 | 161 sps | ETA 1h 08m
+step=   339,200 (33.9%) | ep_ret=n/a  win=n/a | loss=0.9546 | r_int=-0.0520 | 161 sps | ETA 1h 08m
+step=   340,800 (34.1%) | ep_ret=n/a  win=n/a | loss=1.3360 | r_int=-0.0178 | 161 sps | ETA 1h 08m
+step=   342,400 (34.2%) | ep_ret=n/a  win=n/a | loss=1.8216 | r_int=-0.0203 | 161 sps | ETA 1h 08m
+step=   344,000 (34.4%) | ep_ret=n/a  win=n/a | loss=1.1674 | r_int=-0.0290 | 161 sps | ETA 1h 07m
+step=   345,600 (34.6%) | ep_ret=n/a  win=n/a | loss=1.0348 | r_int=-0.0203 | 161 sps | ETA 1h 07m
+step=   347,200 (34.7%) | ep_ret=n/a  win=n/a | loss=1.8480 | r_int=-0.0214 | 162 sps | ETA 1h 07m
+step=   348,800 (34.9%) | ep_ret=n/a  win=n/a | loss=0.9840 | r_int=-0.0231 | 162 sps | ETA 1h 07m
+step=   350,400 (35.0%) | ep_ret=n/a  win=n/a | loss=2.0379 | r_int=-0.0407 | 162 sps | ETA 1h 06m
+step=   352,000 (35.2%) | ep_ret=n/a  win=n/a | loss=0.9913 | r_int=-0.0048 | 162 sps | ETA 1h 06m
+step=   353,600 (35.4%) | ep_ret=n/a  win=n/a | loss=1.4461 | r_int=-0.0267 | 162 sps | ETA 1h 06m
+step=   355,200 (35.5%) | ep_ret=n/a  win=n/a | loss=1.0539 | r_int=-0.0416 | 162 sps | ETA 1h 06m
+step=   356,800 (35.7%) | ep_ret=n/a  win=n/a | loss=1.1376 | r_int=-0.0316 | 163 sps | ETA 1h 05m
+step=   358,400 (35.8%) | ep_ret=n/a  win=n/a | loss=1.7135 | r_int=-0.0213 | 163 sps | ETA 1h 05m
+step=   360,000 (36.0%) | ep_ret=n/a  win=n/a | loss=2.1350 | r_int=-0.0069 | 163 sps | ETA 1h 05m
+step=   361,600 (36.2%) | ep_ret=n/a  win=n/a | loss=0.9329 | r_int=-0.0140 | 163 sps | ETA 1h 05m
+step=   363,200 (36.3%) | ep_ret=n/a  win=n/a | loss=0.9896 | r_int=-0.0008 | 163 sps | ETA 1h 05m
+step=   364,800 (36.5%) | ep_ret=n/a  win=n/a | loss=1.0273 | r_int=-0.0124 | 163 sps | ETA 1h 04m
+step=   366,400 (36.6%) | ep_ret=n/a  win=n/a | loss=1.2982 | r_int=-0.0110 | 163 sps | ETA 1h 04m
+step=   368,000 (36.8%) | ep_ret=n/a  win=n/a | loss=0.8904 | r_int=-0.0124 | 164 sps | ETA 1h 04m
+step=   369,600 (37.0%) | ep_ret=n/a  win=n/a | loss=0.6745 | r_int=0.0033 | 164 sps | ETA 1h 04m
+step=   371,200 (37.1%) | ep_ret=n/a  win=n/a | loss=1.0558 | r_int=-0.0328 | 164 sps | ETA 1h 03m
+step=   372,800 (37.3%) | ep_ret=n/a  win=n/a | loss=1.2203 | r_int=-0.0290 | 164 sps | ETA 1h 03m
+step=   374,400 (37.4%) | ep_ret=n/a  win=n/a | loss=0.9652 | r_int=-0.0273 | 164 sps | ETA 1h 03m
+step=   376,000 (37.6%) | ep_ret=n/a  win=n/a | loss=0.9971 | r_int=-0.0063 | 164 sps | ETA 1h 03m
+step=   377,600 (37.8%) | ep_ret=n/a  win=n/a | loss=0.8535 | r_int=-0.0375 | 165 sps | ETA 1h 03m
+step=   379,200 (37.9%) | ep_ret=n/a  win=n/a | loss=1.0878 | r_int=-0.0391 | 165 sps | ETA 1h 02m
+step=   380,800 (38.1%) | ep_ret=n/a  win=n/a | loss=0.8824 | r_int=-0.0362 | 165 sps | ETA 1h 02m
+step=   382,400 (38.2%) | ep_ret=n/a  win=n/a | loss=1.4279 | r_int=-0.0719 | 165 sps | ETA 1h 02m
+step=   384,000 (38.4%) | ep_ret=n/a  win=n/a | loss=1.5417 | r_int=-0.0415 | 165 sps | ETA 1h 02m
+step=   385,600 (38.6%) | ep_ret=n/a  win=n/a | loss=1.1661 | r_int=-0.0147 | 165 sps | ETA 1h 01m
+step=   387,200 (38.7%) | ep_ret=n/a  win=n/a | loss=1.1374 | r_int=-0.0102 | 165 sps | ETA 1h 01m
+step=   388,800 (38.9%) | ep_ret=n/a  win=n/a | loss=0.8327 | r_int=-0.0542 | 166 sps | ETA 1h 01m
+step=   390,400 (39.0%) | ep_ret=n/a  win=n/a | loss=0.9032 | r_int=-0.0047 | 166 sps | ETA 1h 01m
+step=   392,000 (39.2%) | ep_ret=n/a  win=n/a | loss=3.4348 | r_int=-0.0320 | 166 sps | ETA 1h 01m
+step=   393,600 (39.4%) | ep_ret=n/a  win=n/a | loss=1.2834 | r_int=-0.0539 | 166 sps | ETA 1h 00m
+step=   395,200 (39.5%) | ep_ret=n/a  win=n/a | loss=2.1667 | r_int=-0.0241 | 166 sps | ETA 1h 00m
+step=   396,800 (39.7%) | ep_ret=n/a  win=n/a | loss=0.8459 | r_int=-0.0383 | 166 sps | ETA 1h 00m
+step=   398,400 (39.8%) | ep_ret=n/a  win=n/a | loss=1.0813 | r_int=-0.0341 | 167 sps | ETA 1h 00m
+step=   400,000 (40.0%) | ep_ret=n/a  win=n/a | loss=0.7319 | r_int=-0.0497 | 167 sps | ETA 59m 59s
+[eval] step=400,000 | playing 48 games vs naiveMCTSAI...
+[eval] step=400,000 | winrate=97.9% (target 90%)
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Early stopping: winrate 97.9% >= 90%

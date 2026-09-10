@@ -1,0 +1,61 @@
+New wandb run: tqlgxayp_GOOD-tiamat (zs1phv1c)
+Run id zs1phv1c written to run_id_finetune.txt
+[34m[1mwandb[0m: [33mWARNING[0m The get_url method is deprecated and will be removed in a future release. Please use `run.url` instead.
+Run config (75 parameters) → models/configs/tqlgxayp_GOOD-tiamat_zs1phv1c_config.csv
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Opponents: {0: 'tiamat', 1: 'tiamat', 2: 'tiamat', 3: 'tiamat', 4: 'tiamat', 5: 'tiamat', 6: 'tiamat', 7: 'tiamat', 8: 'tiamat', 9: 'tiamat', 10: 'tiamat', 11: 'tiamat', 12: 'tiamat', 13: 'tiamat', 14: 'tiamat', 15: 'tiamat', 16: 'tiamat', 17: 'tiamat', 18: 'tiamat', 19: 'tiamat', 20: 'tiamat', 21: 'tiamat', 22: 'tiamat', 23: 'tiamat', 24: 'tiamat', 25: 'tiamat', 26: 'tiamat', 27: 'tiamat', 28: 'tiamat', 29: 'tiamat', 30: 'tiamat', 31: 'tiamat', 32: 'tiamat', 33: 'tiamat', 34: 'tiamat', 35: 'tiamat', 36: 'tiamat', 37: 'tiamat', 38: 'tiamat', 39: 'tiamat', 40: 'tiamat', 41: 'tiamat', 42: 'tiamat', 43: 'tiamat', 44: 'tiamat', 45: 'tiamat', 46: 'tiamat', 47: 'tiamat'}
+Action space: [6, 4, 4, 4, 4, 7, 49]  (sum=78)
+Model parameters: 4,394,320
+cosine: False
+  optimizer: Adam moments restored from the checkpoint
+Loaded models/tqlgxayp_GOOD.pt (trained to step 285,717,600)
+Fine-tuning vs tiamat for 1,000,000 steps, counting from 0
+Fine-tuning | 48 envs vs tiamat | 1,000,000 steps | map 16x16 | wandb: tqlgxayp_GOOD-tiamat
+step=     2,400 ( 0.2%) | ep_ret=n/a  win=n/a | loss=0.1747 | r_int=0.0096 | 827 sps | ETA 20m 06s
+step=     4,800 ( 0.5%) | ep_ret=n/a  win=n/a | loss=0.1683 | r_int=-0.0320 | 784 sps | ETA 21m 10s
+step=     7,200 ( 0.7%) | ep_ret=n/a  win=n/a | loss=0.1676 | r_int=-0.0172 | 803 sps | ETA 20m 36s
+step=     9,600 ( 1.0%) | ep_ret=n/a  win=n/a | loss=0.1850 | r_int=0.0122 | 800 sps | ETA 20m 37s
+step=    12,000 ( 1.2%) | ep_ret=n/a  win=n/a | loss=0.2445 | r_int=0.0396 | 809 sps | ETA 20m 21s
+step=    14,400 ( 1.4%) | ep_ret=n/a  win=n/a | loss=0.3106 | r_int=0.0239 | 816 sps | ETA 20m 07s
+step=    16,800 ( 1.7%) | ep_ret=n/a  win=n/a | loss=0.2561 | r_int=-0.0782 | 830 sps | ETA 19m 44s
+step=    19,200 ( 1.9%) | ep_ret=n/a  win=n/a | loss=0.9325 | r_int=-0.0943 | 779 sps | ETA 20m 59s
+step=    21,600 ( 2.2%) | ep_ret=n/a  win=n/a | loss=0.7190 | r_int=-0.0781 | 695 sps | ETA 23m 27s
+step=    24,000 ( 2.4%) | ep_ret=n/a  win=n/a | loss=1.5312 | r_int=-0.0469 | 620 sps | ETA 26m 14s
+step=    26,400 ( 2.6%) | ep_ret=n/a  win=n/a | loss=0.5831 | r_int=-0.0704 | 574 sps | ETA 28m 17s
+step=    28,800 ( 2.9%) | ep_ret=n/a  win=n/a | loss=1.4738 | r_int=-0.0266 | 529 sps | ETA 30m 36s
+step=    31,200 ( 3.1%) | ep_ret=n/a  win=n/a | loss=1.3906 | r_int=-0.0589 | 489 sps | ETA 33m 03s
+step=    33,600 ( 3.4%) | ep_ret=n/a  win=n/a | loss=1.6946 | r_int=-0.0178 | 458 sps | ETA 35m 08s
+step=    36,000 ( 3.6%) | ep_ret=n/a  win=n/a | loss=1.2272 | r_int=-0.0474 | 435 sps | ETA 36m 54s
+step=    38,400 ( 3.8%) | ep_ret=n/a  win=n/a | loss=1.6750 | r_int=-0.0334 | 419 sps | ETA 38m 15s
+step=    40,800 ( 4.1%) | ep_ret=n/a  win=n/a | loss=0.7687 | r_int=-0.0533 | 409 sps | ETA 39m 05s
+step=    43,200 ( 4.3%) | ep_ret=n/a  win=n/a | loss=1.1413 | r_int=-0.0237 | 401 sps | ETA 39m 47s
+step=    45,600 ( 4.6%) | ep_ret=n/a  win=n/a | loss=1.3003 | r_int=-0.0555 | 394 sps | ETA 40m 24s
+step=    48,000 ( 4.8%) | ep_ret=n/a  win=n/a | loss=1.0764 | r_int=-0.0348 | 386 sps | ETA 41m 06s
+step=    50,400 ( 5.0%) | ep_ret=n/a  win=n/a | loss=0.9787 | r_int=-0.0339 | 379 sps | ETA 41m 45s
+step=    52,800 ( 5.3%) | ep_ret=n/a  win=n/a | loss=1.7361 | r_int=-0.0232 | 373 sps | ETA 42m 20s
+step=    55,200 ( 5.5%) | ep_ret=n/a  win=n/a | loss=1.3264 | r_int=-0.0192 | 367 sps | ETA 42m 53s
+step=    57,600 ( 5.8%) | ep_ret=n/a  win=n/a | loss=1.2912 | r_int=-0.0169 | 362 sps | ETA 43m 25s
+step=    60,000 ( 6.0%) | ep_ret=n/a  win=n/a | loss=1.4449 | r_int=-0.0381 | 357 sps | ETA 43m 55s
+step=    62,400 ( 6.2%) | ep_ret=n/a  win=n/a | loss=1.5278 | r_int=-0.0358 | 352 sps | ETA 44m 21s
+step=    64,800 ( 6.5%) | ep_ret=n/a  win=n/a | loss=1.0187 | r_int=-0.0058 | 347 sps | ETA 44m 55s
+step=    67,200 ( 6.7%) | ep_ret=n/a  win=n/a | loss=1.0164 | r_int=-0.0073 | 342 sps | ETA 45m 28s
+step=    69,600 ( 7.0%) | ep_ret=n/a  win=n/a | loss=1.2782 | r_int=0.0069 | 339 sps | ETA 45m 42s
+step=    72,000 ( 7.2%) | ep_ret=n/a  win=n/a | loss=1.1772 | r_int=-0.0132 | 336 sps | ETA 46m 00s
+step=    74,400 ( 7.4%) | ep_ret=n/a  win=n/a | loss=1.3024 | r_int=-0.0108 | 332 sps | ETA 46m 29s
+step=    76,800 ( 7.7%) | ep_ret=n/a  win=n/a | loss=0.9373 | r_int=-0.0128 | 328 sps | ETA 46m 58s
+step=    79,200 ( 7.9%) | ep_ret=n/a  win=n/a | loss=1.1066 | r_int=0.0034 | 325 sps | ETA 47m 17s
+step=    81,600 ( 8.2%) | ep_ret=n/a  win=n/a | loss=1.4128 | r_int=-0.0028 | 324 sps | ETA 47m 17s
+step=    84,000 ( 8.4%) | ep_ret=n/a  win=n/a | loss=1.1356 | r_int=-0.0114 | 323 sps | ETA 47m 17s
+step=    86,400 ( 8.6%) | ep_ret=n/a  win=n/a | loss=0.9573 | r_int=-0.0057 | 323 sps | ETA 47m 08s
+step=    88,800 ( 8.9%) | ep_ret=n/a  win=n/a | loss=0.9101 | r_int=-0.0058 | 323 sps | ETA 46m 58s
+step=    91,200 ( 9.1%) | ep_ret=n/a  win=n/a | loss=1.1634 | r_int=-0.0095 | 323 sps | ETA 46m 49s
+step=    93,600 ( 9.4%) | ep_ret=n/a  win=n/a | loss=1.7902 | r_int=-0.0002 | 324 sps | ETA 46m 37s
+step=    96,000 ( 9.6%) | ep_ret=n/a  win=n/a | loss=1.1344 | r_int=-0.0142 | 324 sps | ETA 46m 28s
+step=    98,400 ( 9.8%) | ep_ret=n/a  win=n/a | loss=1.0350 | r_int=-0.0042 | 324 sps | ETA 46m 19s
+step=   100,800 (10.1%) | ep_ret=n/a  win=n/a | loss=1.2186 | r_int=0.0013 | 324 sps | ETA 46m 13s
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Checkpoint saved → models/tqlgxayp_GOOD-tiamat_step=100800.pt
+[eval] step=100,800 | playing 50 games vs tiamat...
+[eval] step=100,800 | winrate=100.0% (target 90%)
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Early stopping: winrate 100.0% >= 90%

@@ -1,0 +1,7 @@
+name: feudalenv
+channels:
+  - defaults
+dependencies:
+  - python=3.9.7
+  - conda-pack
+prefix: /home/rhatos/.conda/envs/feudalenv

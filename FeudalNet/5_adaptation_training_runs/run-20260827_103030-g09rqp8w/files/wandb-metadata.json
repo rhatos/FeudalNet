@@ -1,0 +1,68 @@
+{
+  "os":  "Linux-7.1.7-zen1-1-zen-x86_64-with-glibc2.44",
+  "python":  "CPython 3.9.7",
+  "startedAt":  "2026-08-27T08:30:30.893663Z",
+  "args":  [
+    "--checkpoint",
+    "models/tqlgxayp_GOOD.pt",
+    "--opponent",
+    "mixedBot",
+    "--max-steps",
+    "1000000",
+    "--num-workers",
+    "48",
+    "--num-steps",
+    "50",
+    "--lr",
+    "3e-4",
+    "--entropy-coef",
+    "0.015",
+    "--n-pi",
+    "2",
+    "--e-aux",
+    "6",
+    "--value-coef",
+    "1.0",
+    "--eval-every",
+    "100000",
+    "--eval-games",
+    "50",
+    "--eval-workers",
+    "48",
+    "--eval-winrate",
+    "0.90",
+    "--eval-record",
+    "False"
+  ],
+  "program":  "/home/rhatos/wiki/Honours/Project/ProjectCode/feudalnet/finetune_opponent_norender.py",
+  "codePath":  "finetune_opponent_norender.py",
+  "codePathLocal":  "finetune_opponent_norender.py",
+  "email":  "rhatking@proton.me",
+  "root":  "/home/rhatos/wiki/Honours/Project/ProjectCode/feudalnet",
+  "host":  "magi",
+  "executable":  "/home/rhatos/.conda/envs/feudalenv/bin/python",
+  "cpu_count":  24,
+  "cpu_count_logical":  32,
+  "gpu":  "NVIDIA GeForce RTX 4060 Ti",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "982291398656",
+      "used":  "381849341952"
+    }
+  },
+  "memory":  {
+    "total":  "33305235456"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 4060 Ti",
+      "memoryTotal":  "17175674880",
+      "cudaCores":  4352,
+      "architecture":  "Ada",
+      "uuid":  "GPU-02520409-840c-ca85-6043-226cee3b8318"
+    }
+  ],
+  "cudaVersion":  "13.3",
+  "writerId":  "zqfhamopnfmm3eqhf4oiht5bamcc0bhl"
+}
